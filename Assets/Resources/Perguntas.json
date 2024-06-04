@@ -1,0 +1,429 @@
+{
+  "Perguntas": [
+    {
+      "Texto": "Qual é a capital da França?",
+      "Respostas": [
+        {
+          "Texto": "Paris",
+          "Valor": 6
+        },
+        {
+          "Texto": "Lyon",
+          "Valor": 0
+        },
+        {
+          "Texto": "Marselha",
+          "Valor": 0
+        }
+      ]
+    },
+    {
+      "Texto": "Qual planeta é conhecido como o Planeta Vermelho?",
+      "Respostas": [
+        {
+          "Texto": "Marte",
+          "Valor": 1
+        },
+        {
+          "Texto": "Júpiter",
+          "Valor": 0
+        },
+        {
+          "Texto": "Vênus",
+          "Valor": 0
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é o maior oceano da Terra?",
+      "Respostas": [
+        {
+          "Texto": "Oceano Pacífico",
+          "Valor": 2
+        },
+        {
+          "Texto": "Oceano Atlântico",
+          "Valor": 0
+        },
+        {
+          "Texto": "Oceano Índico",
+          "Valor": 0
+        }
+      ]
+    },
+    {
+      "Texto": "Quem escreveu 'O Sol é para Todos'?",
+      "Respostas": [
+        {
+          "Texto": "Harper Lee",
+          "Valor": 10
+        },
+        {
+          "Texto": "Mark Twain",
+          "Valor": 0
+        },
+        {
+          "Texto": "Ernest Hemingway",
+          "Valor": 0
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é o menor número primo?",
+      "Respostas": [
+        {
+          "Texto": "2",
+          "Valor": 5
+        },
+        {
+          "Texto": "1",
+          "Valor": 0
+        },
+        {
+          "Texto": "3",
+          "Valor": -1
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é a montanha mais alta do mundo?",
+      "Respostas": [
+        {
+          "Texto": "Monte Everest",
+          "Valor": 4
+        },
+        {
+          "Texto": "K2",
+          "Valor": -1
+        },
+        {
+          "Texto": "Kangchenjunga",
+          "Valor": -1
+        }
+      ]
+    },
+    {
+      "Texto": "Quem pintou a Mona Lisa?",
+      "Respostas": [
+        {
+          "Texto": "Leonardo da Vinci",
+          "Valor": 5
+        },
+        {
+          "Texto": "Vincent van Gogh",
+          "Valor": 2
+        },
+        {
+          "Texto": "Pablo Picasso",
+          "Valor": 1
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é o rio mais longo do mundo?",
+      "Respostas": [
+        {
+          "Texto": "Rio Nilo",
+          "Valor": 10
+        },
+        {
+          "Texto": "Rio Amazonas",
+          "Valor": 8
+        },
+        {
+          "Texto": "Rio Yangtzé",
+          "Valor": -3
+        }
+      ]
+    },
+    {
+      "Texto": "Quem descobriu a teoria da relatividade?",
+      "Respostas": [
+        {
+          "Texto": "Albert Einstein",
+          "Valor": 1
+        },
+        {
+          "Texto": "Isaac Newton",
+          "Valor": 0
+        },
+        {
+          "Texto": "Galileu Galilei",
+          "Valor": -3
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é o país mais populoso do mundo?",
+      "Respostas": [
+        {
+          "Texto": "China",
+          "Valor": 10
+        },
+        {
+          "Texto": "Índia",
+          "Valor": 8
+        },
+        {
+          "Texto": "Estados Unidos",
+          "Valor": 3
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é a capital do Japão?",
+      "Respostas": [
+        {
+          "Texto": "Tóquio",
+          "Valor": 10
+        },
+        {
+          "Texto": "Osaka",
+          "Valor": 5
+        },
+        {
+          "Texto": "Quioto",
+          "Valor": 3
+        }
+      ]
+    },
+    {
+      "Texto": "Quem escreveu 'Dom Quixote'?",
+      "Respostas": [
+        {
+          "Texto": "Miguel de Cervantes",
+          "Valor": 10
+        },
+        {
+          "Texto": "William Shakespeare",
+          "Valor": 5
+        },
+        {
+          "Texto": "Gabriel García Márquez",
+          "Valor": 2
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é o maior deserto do mundo?",
+      "Respostas": [
+        {
+          "Texto": "Deserto do Saara",
+          "Valor": 8
+        },
+        {
+          "Texto": "Deserto de Gobi",
+          "Valor": 5
+        },
+        {
+          "Texto": "Deserto da Arábia",
+          "Valor": 3
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é o menor país do mundo?",
+      "Respostas": [
+        {
+          "Texto": "Vaticano",
+          "Valor": 6
+        },
+        {
+          "Texto": "Mônaco",
+          "Valor": 5
+        },
+        {
+          "Texto": "Nauru",
+          "Valor": 3
+        }
+      ]
+    },
+    {
+      "Texto": "Quem inventou a lâmpada elétrica?",
+      "Respostas": [
+        {
+          "Texto": "Thomas Edison",
+          "Valor": 7
+        },
+        {
+          "Texto": "Nikola Tesla",
+          "Valor": 5
+        },
+        {
+          "Texto": "Alexander Graham Bell",
+          "Valor": 3
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é a capital do Brasil?",
+      "Respostas": [
+        {
+          "Texto": "Brasília",
+          "Valor": 9
+        },
+        {
+          "Texto": "Rio de Janeiro",
+          "Valor": 5
+        },
+        {
+          "Texto": "São Paulo",
+          "Valor": 3
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é o maior planeta do sistema solar?",
+      "Respostas": [
+        {
+          "Texto": "Júpiter",
+          "Valor": 11
+        },
+        {
+          "Texto": "Saturno",
+          "Valor": 5
+        },
+        {
+          "Texto": "Netuno",
+          "Valor": 3
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é a língua mais falada no mundo?",
+      "Respostas": [
+        {
+          "Texto": "Mandarim",
+          "Valor": 80
+        },
+        {
+          "Texto": "Inglês",
+          "Valor": 8
+        },
+        {
+          "Texto": "Espanhol",
+          "Valor": 5
+        }
+      ]
+    },
+    {
+      "Texto": "Quem é conhecido como o pai da computação?",
+      "Respostas": [
+        {
+          "Texto": "Alan Turing",
+          "Valor": 5
+        },
+        {
+          "Texto": "Charles Babbage",
+          "Valor": 3
+        },
+        {
+          "Texto": "John von Neumann",
+          "Valor": -5
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é o metal mais abundante na Terra?",
+      "Respostas": [
+        {
+          "Texto": "Alumínio",
+          "Valor": 10
+        },
+        {
+          "Texto": "Ferro",
+          "Valor": 8
+        },
+        {
+          "Texto": "Cobre",
+          "Valor": 5
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é a fórmula química da água?",
+      "Respostas": [
+        {
+          "Texto": "H2O",
+          "Valor": 13
+        },
+        {
+          "Texto": "CO2",
+          "Valor": 0
+        },
+        {
+          "Texto": "O2",
+          "Valor": 0
+        }
+      ]
+    },
+    {
+      "Texto": "Quem escreveu '1984'?",
+      "Respostas": [
+        {
+          "Texto": "George Orwell",
+          "Valor": 100
+        },
+        {
+          "Texto": "Aldous Huxley",
+          "Valor": 5
+        },
+        {
+          "Texto": "Ray Bradbury",
+          "Valor": 3
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é o órgão mais pesado do corpo humano?",
+      "Respostas": [
+        {
+          "Texto": "Fígado",
+          "Valor": 14
+        },
+        {
+          "Texto": "Cérebro",
+          "Valor": 5
+        },
+        {
+          "Texto": "Pulmão",
+          "Valor": 3
+        }
+      ]
+    },
+    {
+      "Texto": "Quem foi o primeiro homem a pisar na Lua?",
+      "Respostas": [
+        {
+          "Texto": "Neil Armstrong",
+          "Valor": 18
+        },
+        {
+          "Texto": "Buzz Aldrin",
+          "Valor": 5
+        },
+        {
+          "Texto": "Yuri Gagarin",
+          "Valor": 3
+        }
+      ]
+    },
+    {
+      "Texto": "Qual é o maior país da América do Sul?",
+      "Respostas": [
+        {
+          "Texto": "Brasil",
+          "Valor": 10
+        },
+        {
+          "Texto": "Argentina",
+          "Valor": 5
+        },
+        {
+          "Texto": "Peru",
+          "Valor": 3
+        }
+      ]
+    }
+  ]
+}
