@@ -71,7 +71,7 @@ public class GoogleSignInHandler : MonoBehaviour
 
     public void CarregarCena()
     {
-        SceneManager.LoadScene("PainelSelectSerie");
+        SceneManager.LoadScene("Menu");
     }
 
     void SignInWithFirebase(Credential credential)

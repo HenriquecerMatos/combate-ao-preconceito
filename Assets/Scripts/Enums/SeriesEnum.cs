@@ -4,7 +4,7 @@ using System.ComponentModel;
 
 public enum SeriesEnum
 {
-    Serie6 = 0,
+    Serie6,
     Serie7,
     Serie8,
     Ano1,
@@ -40,6 +40,8 @@ public enum PanelEnum
     PerguntaResposta,
     Resultado,
 }
+
+
 
 /// <summary>
 /// Sexo biológico
