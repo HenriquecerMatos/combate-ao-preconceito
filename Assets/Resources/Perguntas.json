@@ -1,23 +1,161 @@
 {
   "Perguntas": [
     {
-      "Texto": "Qual é a capital da França?",
+      "Id": "1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m14",
+      "Texto": "O que você faria se visse alguém sendo discriminado por causa da sua cor de pele?",
       "Respostas": [
         {
-          "Texto": "Paris",
-          "Valor": 6
+          "Texto": "Intervenho imediatamente e ofereço apoio à pessoa discriminada.",
+          "Valor": 10
         },
         {
-          "Texto": "Lyon",
-          "Valor": 0
+          "Texto": "Gravo a situação para ter provas e depois reporto às autoridades competentes.",
+          "Valor": 5
         },
         {
-          "Texto": "Marselha",
-          "Valor": 0
+          "Texto": "Ignoro a situação e sigo meu caminho.",
+          "Valor": -5
+        },
+        {
+          "Texto": "Acho que a pessoa deve resolver o problema sozinha.",
+          "Valor": -10
         }
       ]
     },
     {
+      "Id": "2b3c4d5e-6f7g-8h9i-10j11-k12l13m14n15",
+      "Texto": "Como você reage quando ouve uma piada racista em um grupo de amigos?",
+      "Respostas": [
+        {
+          "Texto": "Confronto a pessoa que fez a piada e explico por que isso é errado.",
+          "Valor": 10
+        },
+        {
+          "Texto": "Ignoro a piada e tento mudar de assunto.",
+          "Valor": 0
+        },
+        {
+          "Texto": "Riu junto com os outros, mas depois me sinto desconfortável.",
+          "Valor": -5
+        },
+        {
+          "Texto": "Concordo e adiciono mais piadas ao assunto.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Id": "3c4d5e6f-7g8h-9i10-j11k12-l13m14n15o16",
+      "Texto": "Como você agiria se alguém na sua empresa fizesse comentários negativos sobre a religião de um colega?",
+      "Respostas": [
+        {
+          "Texto": "Denuncio imediatamente ao departamento de Recursos Humanos.",
+          "Valor": 10
+        },
+        {
+          "Texto": "Converso com a pessoa que fez os comentários e tento educá-la sobre a importância do respeito.",
+          "Valor": 5
+        },
+        {
+          "Texto": "Finjo que não ouvi os comentários e continuo com meu trabalho.",
+          "Valor": -5
+        },
+        {
+          "Texto": "Apoio os comentários e concordo com eles.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Id": "4d5e6f7g-8h9i-10j11-k12l13-m14n15o16p17",
+      "Texto": "O que você faria se visse uma pessoa com deficiência sendo excluída de uma atividade social?",
+      "Respostas": [
+        {
+          "Texto": "Intervenho e incluo a pessoa na atividade.",
+          "Valor": 10
+        },
+        {
+          "Texto": "Falo com o organizador do evento para garantir que a pessoa seja incluída.",
+          "Valor": 5
+        },
+        {
+          "Texto": "Finjo que não vi nada e sigo com minhas atividades.",
+          "Valor": -5
+        },
+        {
+          "Texto": "Acredito que a pessoa com deficiência deve encontrar outra atividade que possa fazer sozinha.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Id": "5e6f7g8h-9i10-j11k-12l13m-14n15o16p17q18",
+      "Texto": "Como você reage quando alguém faz um comentário estereotipado sobre um grupo étnico específico?",
+      "Respostas": [
+        {
+          "Texto": "Desafio o comentário e explico por que é prejudicial.",
+          "Valor": 10
+        },
+        {
+          "Texto": "Tento mudar de assunto sem confrontar diretamente.",
+          "Valor": 0
+        },
+        {
+          "Texto": "Finjo que concordo para evitar conflitos.",
+          "Valor": -5
+        },
+        {
+          "Texto": "Concordo e faço comentários semelhantes.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Id": "6f7g8h9i-10j11-k12l-13m14n-15o16p17q18r19",
+      "Texto": "O que você faria se soubesse que um amigo próximo tem atitudes preconceituosas em relação a imigrantes?",
+      "Respostas": [
+        {
+          "Texto": "Converso com meu amigo sobre o impacto negativo de suas atitudes.",
+          "Valor": 10
+        },
+        {
+          "Texto": "Evito falar sobre o assunto para manter a paz.",
+          "Valor": 0
+        },
+        {
+          "Texto": "Concordo com meu amigo em algumas situações.",
+          "Valor": -5
+        },
+        {
+          "Texto": "Apoio abertamente as opiniões do meu amigo.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Id": "d17f8e9e-dff9-4a2c-9fa0-1d2ec6d49e08",
+      "Texto": "O que você faria se visse alguém sendo discriminado por causa da sua cor de pele?",
+      "Respostas": [
+        {
+          "Texto": "Intervenho imediatamente e ofereço apoio à pessoa discriminada.",
+          "Valor": 10
+        },
+        {
+          "Texto": "Gravo a situação para ter provas e depois reporto às autoridades competentes.",
+          "Valor": 5
+        },
+        {
+          "Texto": "Ignoro a situação e sigo meu caminho.",
+          "Valor": -5
+        },
+        {
+          "Texto": "Acho que a pessoa deve resolver o problema sozinha.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Id": "e7f5e2d1-9d25-4b58-91ef-2d7151eac34b",
       "Texto": "Qual planeta é conhecido como o Planeta Vermelho?",
       "Respostas": [
         {
@@ -35,6 +173,7 @@
       ]
     },
     {
+      "Id": "5c9b9b19-b9f6-4ae5-9388-89eec1d1f4a3",
       "Texto": "Qual é o maior oceano da Terra?",
       "Respostas": [
         {
@@ -52,6 +191,7 @@
       ]
     },
     {
+      "Id": "7b49a7d7-68a6-4d8e-89c1-5b5f8c19c28e",
       "Texto": "Quem escreveu 'O Sol é para Todos'?",
       "Respostas": [
         {
@@ -69,6 +209,7 @@
       ]
     },
     {
+      "Id": "4e17d9b9-92b4-4825-9838-9e9e7f2c5c39",
       "Texto": "Qual é o menor número primo?",
       "Respostas": [
         {
@@ -86,6 +227,7 @@
       ]
     },
     {
+      "Id": "d17b1c3e-5a8f-45f6-9f1a-2b7b1d1c5b3a",
       "Texto": "Qual é a montanha mais alta do mundo?",
       "Respostas": [
         {
@@ -103,6 +245,7 @@
       ]
     },
     {
+      "Id": "a87b9c9d-5d9e-4bfa-9e9a-2b7d1e9c4b5a",
       "Texto": "Quem pintou a Mona Lisa?",
       "Respostas": [
         {
@@ -120,6 +263,7 @@
       ]
     },
     {
+      "Id": "5c2f8d3d-9d1a-4e5b-91a5-2d7c5e2b3d5c",
       "Texto": "Qual é o rio mais longo do mundo?",
       "Respostas": [
         {
@@ -137,6 +281,7 @@
       ]
     },
     {
+      "Id": "7c1e9d2e-8f9a-4d5e-91b1-2d7e1e3c4d5c",
       "Texto": "Quem descobriu a teoria da relatividade?",
       "Respostas": [
         {
@@ -154,6 +299,7 @@
       ]
     },
     {
+      "Id": "5b2f8d3d-9c1a-4e5b-91d5-2d7c5e2b3d5a",
       "Texto": "Qual é o país mais populoso do mundo?",
       "Respostas": [
         {
@@ -171,6 +317,7 @@
       ]
     },
     {
+      "Id": "4c1e8d2e-9f9a-4b5e-91d1-2d7e1e3c4d5b",
       "Texto": "Qual é a capital do Japão?",
       "Respostas": [
         {
@@ -188,6 +335,7 @@
       ]
     },
     {
+      "Id": "7b2d8d3d-9c1b-4e5a-91f5-2d7c5e2c3d5a",
       "Texto": "Quem escreveu 'Dom Quixote'?",
       "Respostas": [
         {
@@ -205,6 +353,7 @@
       ]
     },
     {
+      "Id": "3c1e8d2e-9b9a-4e5b-91d1-2d7e1e3c4d5b",
       "Texto": "Qual é o maior deserto do mundo?",
       "Respostas": [
         {
@@ -222,6 +371,7 @@
       ]
     },
     {
+      "Id": "5d1f8c3d-9b1a-4e5c-91d5-2d7c5e2c3d5a",
       "Texto": "Qual é o menor país do mundo?",
       "Respostas": [
         {
@@ -239,6 +389,7 @@
       ]
     },
     {
+      "Id": "2b1e8d3d-9c1a-4e5b-91d5-2d7e5e2b3d5a",
       "Texto": "Quem inventou a lâmpada elétrica?",
       "Respostas": [
         {
@@ -256,6 +407,7 @@
       ]
     },
     {
+      "Id": "5d1e8d2d-9b1a-4e5a-91d1-2d7c5e2c3d5a",
       "Texto": "Qual é a capital do Brasil?",
       "Respostas": [
         {
@@ -273,6 +425,7 @@
       ]
     },
     {
+      "Id": "7c1d8d2e-9f1a-4b5e-91d1-2d7e5e2c3d5a",
       "Texto": "Qual é o maior planeta do sistema solar?",
       "Respostas": [
         {
@@ -290,6 +443,7 @@
       ]
     },
     {
+      "Id": "4b1e8d2e-9b9a-4e5b-91d5-2d7e1e3c4d5a",
       "Texto": "Qual é a língua mais falada no mundo?",
       "Respostas": [
         {
@@ -307,6 +461,7 @@
       ]
     },
     {
+      "Id": "3d1f8c3d-9b1a-4e5b-91d1-2d7c5e2c3d5a",
       "Texto": "Quem é conhecido como o pai da computação?",
       "Respostas": [
         {
@@ -324,6 +479,7 @@
       ]
     },
     {
+      "Id": "6b1e8d2d-9b9a-4e5b-91d1-2d7e1e3c4d5a",
       "Texto": "Qual é o metal mais abundante na Terra?",
       "Respostas": [
         {
@@ -341,6 +497,7 @@
       ]
     },
     {
+      "Id": "5d1e8d2d-9b9a-4e5b-91d1-2d7e1e3c4d5a",
       "Texto": "Qual é a fórmula química da água?",
       "Respostas": [
         {
@@ -358,6 +515,7 @@
       ]
     },
     {
+      "Id": "4d1e8c2d-9b1a-4e5b-91d1-2d7e1e3c4d5a",
       "Texto": "Quem escreveu '1984'?",
       "Respostas": [
         {
@@ -375,6 +533,7 @@
       ]
     },
     {
+      "Id": "7d1f8c2d-9b1a-4e5b-91d1-2d7c5e2c3d5a",
       "Texto": "Qual é o órgão mais pesado do corpo humano?",
       "Respostas": [
         {
@@ -392,6 +551,7 @@
       ]
     },
     {
+      "Id": "2d1e8d3d-9b9a-4e5b-91d1-2d7e1e3c4d5a",
       "Texto": "Quem foi o primeiro homem a pisar na Lua?",
       "Respostas": [
         {
@@ -409,6 +569,7 @@
       ]
     },
     {
+      "Id": "5c1e8d2e-9b1a-4e5b-91d1-2d7e1e3c4d5a",
       "Texto": "Qual é o maior país da América do Sul?",
       "Respostas": [
         {
@@ -425,5 +586,6 @@
         }
       ]
     }
+
   ]
 }

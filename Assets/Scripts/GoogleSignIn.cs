@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net;
 using System;
+using static UnityEngine.UIElements.UxmlAttributeDescription;
+using UnityEngine.SceneManagement;
 
 public class GoogleSignInHandler : MonoBehaviour
 {
@@ -62,7 +64,14 @@ public class GoogleSignInHandler : MonoBehaviour
             GoogleSignInUser googleUser = task.Result;
             Credential credential = GoogleAuthProvider.GetCredential(googleUser.IdToken, null);
             SignInWithFirebase(credential);
+
+            CarregarCena();
         }
+    }
+
+    public void CarregarCena()
+    {
+        SceneManager.LoadScene("PainelSelectSerie");
     }
 
     void SignInWithFirebase(Credential credential)
