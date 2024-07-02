@@ -12,7 +12,6 @@ public class BaseController : MonoBehaviour
             if (userControllers.Length > 0)
             {
                 UserController = userControllers[0];
-                UserController.Serie = SeriesEnum.Serie6;
             }
             else
             {
