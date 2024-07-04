@@ -5,20 +5,20 @@ namespace Entities
     public class Caracteristicas
     {
         [SerializeField]
-        public SexoEnum Sexo { get; set; } = SexoEnum.Masculino;
+        public SexoEnum Sexo = SexoEnum.Masculino;
         [SerializeField]
-        public AlturaEnum Altura { get; set; } = AlturaEnum.Alto;
+        public AlturaEnum Altura  = AlturaEnum.Alto;
         [SerializeField]
-        public DeficienciaEnum Deficiencia { get; set; } = DeficienciaEnum.SemDeficiencia;
+        public DeficienciaEnum Deficiencia  = DeficienciaEnum.SemDeficiencia;
         [SerializeField]
-        public PreferenciaSexualEnum Preferencia { get; set; } = PreferenciaSexualEnum.Heterosexual;
+        public PreferenciaSexualEnum Preferencia  = PreferenciaSexualEnum.Heterosexual;
         [SerializeField]
-        public FaixaEtariaEnum FaixaEtaria { get; set; } = FaixaEtariaEnum.Adulto;
+        public FaixaEtariaEnum FaixaEtaria  = FaixaEtariaEnum.Adulto;
 
         [SerializeField]
-        public CorDaPeleEtniaEnum CorDaPeleEtnia { get; set; } = CorDaPeleEtniaEnum.Branca;
+        public CorDaPeleEtniaEnum CorDaPeleEtnia  = CorDaPeleEtniaEnum.Branca;
 
         [SerializeField]
-        public FinaceiroEnum Finaceiro { get; set; } = FinaceiroEnum.Rico;
+        public FinaceiroEnum Finaceiro = FinaceiroEnum.Rico;
     }
 }

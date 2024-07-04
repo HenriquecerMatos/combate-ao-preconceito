@@ -2,6 +2,26 @@
 using Assets.Scripts.Extencions;
 using System.ComponentModel;
 
+
+public enum TipoAtividadeEnum
+{
+    [Description("Não Definida")]
+    NaoDefinida,
+    [Description("Eventos")]
+    Eventos,
+    [Description("Exames e Provas")]
+    ExamesProvas,
+    [Description("Dilemas")]
+    Dilemas,
+    [Description("Oportunidades e Desafios")]
+    OportunidadesDesafios,
+    [Description("Aquisições")]
+    Aquisicoes,
+    [Description("Perdas")]
+    Perdas
+}
+
+
 public enum SeriesEnum
 {
     Serie6,
@@ -33,7 +53,7 @@ public enum DificuldadeEnum
 }
 
 public enum PanelEnum
-{    
+{
     Serie,
     Dificuldade,
     Jogo,
@@ -147,13 +167,14 @@ public enum TipoFisicoEnum
 /// </summary>
 public enum FinaceiroEnum
 {
-    [Description("Miserável"), Dificuldade(DificuldadeEnum.dificil), Peso(0.1f)] //10%
-    Miseravel,
-    [Description("Pobre"), Dificuldade(DificuldadeEnum.dificil), Peso(0.05f)] //5%
-    Pobre,
+   
     [Description("Media"), Dificuldade(DificuldadeEnum.Medio), Peso(0f)] //0%
     Media,
     [Description("Rico"), Dificuldade(DificuldadeEnum.Facil), Peso(-1f)] //+10%
     Rico,
+    [Description("Pobre"), Dificuldade(DificuldadeEnum.dificil), Peso(0.05f)] //5%
+    Pobre,
+    [Description("Miserável"), Dificuldade(DificuldadeEnum.dificil), Peso(0.1f)] //10%
+    Miseravel,
 }
 

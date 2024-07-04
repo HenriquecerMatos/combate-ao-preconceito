@@ -31,6 +31,6 @@ public class MenuController : MonoBehaviour
     }
     public void CarregarCena()
     {
-        SceneManager.LoadScene("Serie");
+        SceneManager.LoadScene("ConfiguracaoUser");
     }
 }

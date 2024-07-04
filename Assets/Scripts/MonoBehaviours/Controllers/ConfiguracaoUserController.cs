@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class DificuldadeController : BaseController
+public class ConfiguracaoUserController : BaseController
 {
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
