@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
-using UnityEngine;
 
 namespace Entities
 {
@@ -37,26 +34,28 @@ namespace Entities
     [System.Serializable]
     public class BaseEntity
     {
-        public string Id;
+        public int Id;
+        public string Key;
     }
 
     #region Salvar Respostas
 
 
     [System.Serializable]
-    public class ListaPerguntasRespostas
+    public class ListaRespostasDadas
     {
         public bool Sincronizado;
-        public PerguntasRespostas[] listaPerguntasRespostas;
+        public List<RespostaSelecionada> listaPerguntasRespostas=new();
         public int ValorTotal() => listaPerguntasRespostas.Sum(x => x.Valor);
+        public Caracteristicas Caracteristicas=new();
     }
 
     [System.Serializable]
-    public class PerguntasRespostas
+    public class RespostaSelecionada
     {
-        public DificuldadeEnum Dificuldade;
-        public string PerguntaId;
-        public string RepostaId;
+        //public DificuldadeEnum Dificuldade;
+        public string PerguntaKey;
+        public string RepostaKey;
         public int Valor;
     }
     #endregion

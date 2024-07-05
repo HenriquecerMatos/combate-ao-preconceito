@@ -70,7 +70,7 @@ public enum SexoEnum
 {
     [Description("Homem"), Dificuldade(DificuldadeEnum.Facil), Peso(0f)] //0%
     Masculino,
-    [Description("Mulher"), Dificuldade(DificuldadeEnum.Medio), Peso(0.1f)] //10%
+    [Description("Mulher"), Dificuldade(DificuldadeEnum.Medio), Peso(0.05f)] //5%
     Feminino
 }
 
@@ -83,7 +83,7 @@ public enum AlturaEnum
     Baixo,
     [Description("Normal"), Dificuldade(DificuldadeEnum.Medio), Peso(0f)] //0%
     Normal,
-    [Description("Alto"), Dificuldade(DificuldadeEnum.Facil), Peso(-0.03f)] //+3%
+    [Description("Alto"), Dificuldade(DificuldadeEnum.Facil), Peso(-0.03f)] //+3% // fator facilitador
     Alto
 }
 
@@ -94,11 +94,11 @@ public enum DeficienciaEnum
 {
     [Description("Sem Deficiência"), Dificuldade(DificuldadeEnum.Facil), Peso(0f)] //0%
     SemDeficiencia,
-    [Description("Deficiência Física"), Dificuldade(DificuldadeEnum.Medio), Peso(0.13f)]  //13%
+    [Description("Deficiência Física"), Dificuldade(DificuldadeEnum.Medio), Peso(0.08f)]  //8%
     PCDF,
-    [Description("Deficiência Intelectual"), Dificuldade(DificuldadeEnum.dificil), Peso(0.18f)] //18%
+    [Description("Deficiência Intelectual"), Dificuldade(DificuldadeEnum.dificil), Peso(0.12f)] //12%
     PCDI,
-    [Description("Deficiência Física e Intelectual"), Dificuldade(DificuldadeEnum.dificil), Peso(0.25f)] // 25%
+    [Description("Deficiência Física e Intelectual"), Dificuldade(DificuldadeEnum.dificil), Peso(0.20f)] // 20%
     PCDFI
 }
 
@@ -109,9 +109,9 @@ public enum PreferenciaSexualEnum
 {
     [Description("Heterosexual"), Dificuldade(DificuldadeEnum.Facil), Peso(0f)] //0%
     Heterosexual,
-    [Description("LGBTQI+"), Dificuldade(DificuldadeEnum.dificil), Peso(0.05f)] //5%
+    [Description("LGBTQI+"), Dificuldade(DificuldadeEnum.dificil), Peso(0.04f)] //4%
     LGBTQI,
-    [Description("Assexual"), Dificuldade(DificuldadeEnum.dificil), Peso(0.05f)] //5%
+    [Description("Assexual"), Dificuldade(DificuldadeEnum.dificil), Peso(0.03f)] //3%
     Assexual
 }
 
@@ -120,13 +120,13 @@ public enum PreferenciaSexualEnum
 /// </summary>
 public enum FaixaEtariaEnum
 {
-    [Description("Muito Jovem"), Dificuldade(DificuldadeEnum.dificil), Peso(0.07f)] //7%
+    [Description("Muito Jovem"), Dificuldade(DificuldadeEnum.dificil), Peso(0.05f)] //5%
     MuitoJovem,
-    [Description("Jovem"), Dificuldade(DificuldadeEnum.Medio), Peso(0.05f)] //5%
+    [Description("Jovem"), Dificuldade(DificuldadeEnum.Medio), Peso(0.02f)] //2%
     Jovem,
     [Description("Adulto"), Dificuldade(DificuldadeEnum.Facil), Peso(0f)] //0%
     Adulto,
-    [Description("Idoso"), Dificuldade(DificuldadeEnum.dificil), Peso(0.07f)] //7%
+    [Description("Idoso"), Dificuldade(DificuldadeEnum.dificil), Peso(0.06f)] //6%
     Idoso
 }
 
@@ -139,13 +139,13 @@ public enum CorDaPeleEtniaEnum
     Branca,
     [Description("Amarela"), Dificuldade(DificuldadeEnum.Facil), Peso(0f)] //0%
     Amarela,
-    [Description("Albina"), Dificuldade(DificuldadeEnum.Medio), Peso(0.05f)] //5%
+    [Description("Albina"), Dificuldade(DificuldadeEnum.Medio), Peso(0.025f)] //2,5%
     Albina,
-    [Description("Parda"), Dificuldade(DificuldadeEnum.Facil), Peso(0.03f)] //3%
+    [Description("Parda"), Dificuldade(DificuldadeEnum.Facil), Peso(0.015f)] //1,5%
     Parda,
-    [Description("Indígena"), Dificuldade(DificuldadeEnum.Facil), Peso(0.025f)]  //2,5%
+    [Description("Indígena"), Dificuldade(DificuldadeEnum.Facil), Peso(0.01f)]  //1%
     Indigina,
-    [Description("Negra"), Dificuldade(DificuldadeEnum.dificil), Peso(0.08f)] //8%
+    [Description("Negra"), Dificuldade(DificuldadeEnum.dificil), Peso(0.05f)] //5%
     Negra,
 }
 
@@ -156,25 +156,25 @@ public enum TipoFisicoEnum
 {
     [Description("Normal"), Dificuldade(DificuldadeEnum.Facil), Peso(0f)] //0%
     Normal,
-    [Description("Magra"), Dificuldade(DificuldadeEnum.Medio), Peso(0.03f)] //3%
+    [Description("Magra"), Dificuldade(DificuldadeEnum.Medio), Peso(0.005f)] //0,5%
     Magra,
-    [Description("Obesa"), Dificuldade(DificuldadeEnum.dificil), Peso(0.09f)] //9%
+    [Description("Obesa"), Dificuldade(DificuldadeEnum.dificil), Peso(0.03f)] //3%
     Obesa,
 }
 
 /// <summary>
 /// vida financeira
 /// </summary>
-public enum FinaceiroEnum
+public enum FinanceiroEnum
 {
    
     [Description("Media"), Dificuldade(DificuldadeEnum.Medio), Peso(0f)] //0%
     Media,
-    [Description("Rico"), Dificuldade(DificuldadeEnum.Facil), Peso(-1f)] //+10%
+    [Description("Rico"), Dificuldade(DificuldadeEnum.Facil), Peso(-0.1f)] //+10% // fator facilitador
     Rico,
-    [Description("Pobre"), Dificuldade(DificuldadeEnum.dificil), Peso(0.05f)] //5%
+    [Description("Pobre"), Dificuldade(DificuldadeEnum.dificil), Peso(0.025f)] //2,5%
     Pobre,
-    [Description("Miserável"), Dificuldade(DificuldadeEnum.dificil), Peso(0.1f)] //10%
+    [Description("Miserável"), Dificuldade(DificuldadeEnum.dificil), Peso(0.08f)] //8%
     Miseravel,
 }
 

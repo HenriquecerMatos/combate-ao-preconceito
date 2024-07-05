@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Responsável por criar as caixas que caem na cena "Jogo"
+/// </summary>
 public class ObjectCloner : MonoBehaviour
 {
     public TextAsset textAsset;
@@ -39,7 +42,8 @@ public class ObjectCloner : MonoBehaviour
 
             //randomiza uma pergunta 
             var perguntaRando = Random.Range(0, Perguntas.Perguntas.Length);
-            clone.GetComponent<PerguntaDroper>().Pergunta = Perguntas.Perguntas[perguntaRando];
+            var perguntaSelecionada = Perguntas.Perguntas[perguntaRando];
+            clone.GetComponent<PerguntaDroper>().Pergunta = perguntaSelecionada;
             //ativa o elemento
             clone.SetActive(true);
             // Aguarda o próximo intervalo

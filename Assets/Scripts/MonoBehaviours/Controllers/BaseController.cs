@@ -13,10 +13,11 @@ public class BaseController : MonoBehaviour
             {
                 UserController = userControllers[0];
             }
-            else
+            else//somente para debugar, para não precisar fazer todo o fluxo login>jogo
             {
-                // Nenhum UserController encontrado na cena
-                Debug.LogWarning("Nenhum UserController encontrado na cena.");
+                // Crie um componente com o script UserController
+                GameObject userControllerObject = new GameObject("UserController");
+                UserController = userControllerObject.AddComponent<UserController>();
             }
         }
     }

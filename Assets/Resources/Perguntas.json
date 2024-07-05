@@ -1,591 +1,160 @@
 {
   "Perguntas": [
     {
-      "Id": "1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m14",
+      "Key": "1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m14",
       "Texto": "O que você faria se visse alguém sendo discriminado por causa da sua cor de pele?",
       "Respostas": [
         {
+          "Key": "1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m15",
           "Texto": "Intervenho imediatamente e ofereço apoio à pessoa discriminada.",
-          "Valor": 10
+          "Valor": 12
         },
         {
+          "Key": "1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m16",
           "Texto": "Gravo a situação para ter provas e depois reporto às autoridades competentes.",
           "Valor": 5
         },
         {
+          "Key": "1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m17",
           "Texto": "Ignoro a situação e sigo meu caminho.",
           "Valor": -5
         },
         {
+          "Key": "1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m18",
           "Texto": "Acho que a pessoa deve resolver o problema sozinha.",
           "Valor": -10
         }
       ]
     },
     {
-      "Id": "2b3c4d5e-6f7g-8h9i-10j11-k12l13m14n15",
+      "Key": "2b3c4d5e-6f7g-8h9i-10j11-k12l13m14n15",
       "Texto": "Como você reage quando ouve uma piada racista em um grupo de amigos?",
       "Respostas": [
         {
+          "Key": "2b3c4d5e-6f7g-8h9i-10j11-k12l13m14n16",
           "Texto": "Confronto a pessoa que fez a piada e explico por que isso é errado.",
-          "Valor": 10
+          "Valor": 15
         },
         {
+          "Key": "2b3c4d5e-6f7g-8h9i-10j11-k12l13m14n17",
           "Texto": "Ignoro a piada e tento mudar de assunto.",
           "Valor": 0
         },
         {
+          "Key": "2b3c4d5e-6f7g-8h9i-10j11-k12l13m14n18",
           "Texto": "Riu junto com os outros, mas depois me sinto desconfortável.",
           "Valor": -5
         },
         {
+          "Key": "2b3c4d5e-6f7g-8h9i-10j11-k12l13m14n19",
           "Texto": "Concordo e adiciono mais piadas ao assunto.",
           "Valor": -10
         }
       ]
     },
     {
-      "Id": "3c4d5e6f-7g8h-9i10-j11k12-l13m14n15o16",
+      "Key": "3c4d5e6f-7g8h-9i10-j11k12-l13m14n15o16",
       "Texto": "Como você agiria se alguém na sua empresa fizesse comentários negativos sobre a religião de um colega?",
       "Respostas": [
         {
+          "Key": "3c4d5e6f-7g8h-9i10-j11k12-l13m14n15o17",
           "Texto": "Denuncio imediatamente ao departamento de Recursos Humanos.",
-          "Valor": 10
+          "Valor": 20
         },
         {
+          "Key": "3c4d5e6f-7g8h-9i10-j11k12-l13m14n15o18",
           "Texto": "Converso com a pessoa que fez os comentários e tento educá-la sobre a importância do respeito.",
           "Valor": 5
         },
         {
+          "Key": "3c4d5e6f-7g8h-9i10-j11k12-l13m14n15o19",
           "Texto": "Finjo que não ouvi os comentários e continuo com meu trabalho.",
           "Valor": -5
         },
         {
+          "Key": "3c4d5e6f-7g8h-9i10-j11k12-l13m14n15o20",
           "Texto": "Apoio os comentários e concordo com eles.",
           "Valor": -10
         }
       ]
     },
     {
-      "Id": "4d5e6f7g-8h9i-10j11-k12l13-m14n15o16p17",
+      "Key": "4d5e6f7g-8h9i-10j11-k12l13-m14n15o16p17",
       "Texto": "O que você faria se visse uma pessoa com deficiência sendo excluída de uma atividade social?",
       "Respostas": [
         {
+          "Key": "4d5e6f7g-8h9i-10j11-k12l13-m14n15o16p18",
           "Texto": "Intervenho e incluo a pessoa na atividade.",
-          "Valor": 10
+          "Valor": 8
         },
         {
+          "Key": "4d5e6f7g-8h9i-10j11-k12l13-m14n15o16p19",
           "Texto": "Falo com o organizador do evento para garantir que a pessoa seja incluída.",
           "Valor": 5
         },
         {
+          "Key": "4d5e6f7g-8h9i-10j11-k12l13-m14n15o16p20",
           "Texto": "Finjo que não vi nada e sigo com minhas atividades.",
           "Valor": -5
         },
         {
+          "Key": "4d5e6f7g-8h9i-10j11-k12l13-m14n15o16p21",
           "Texto": "Acredito que a pessoa com deficiência deve encontrar outra atividade que possa fazer sozinha.",
           "Valor": -10
         }
       ]
     },
     {
-      "Id": "5e6f7g8h-9i10-j11k-12l13m-14n15o16p17q18",
+      "Key": "5e6f7g8h-9i10-j11k-12l13m-14n15o16p17q18",
       "Texto": "Como você reage quando alguém faz um comentário estereotipado sobre um grupo étnico específico?",
       "Respostas": [
         {
+          "Key": "5e6f7g8h-9i10-j11k-12l13m-14n15o16p17q19",
           "Texto": "Desafio o comentário e explico por que é prejudicial.",
-          "Valor": 10
+          "Valor": 6
         },
         {
+          "Key": "5e6f7g8h-9i10-j11k-12l13m-14n15o16p17q20",
           "Texto": "Tento mudar de assunto sem confrontar diretamente.",
           "Valor": 0
         },
         {
+          "Key": "5e6f7g8h-9i10-j11k-12l13m-14n15o16p17q21",
           "Texto": "Finjo que concordo para evitar conflitos.",
           "Valor": -5
         },
         {
+          "Key": "5e6f7g8h-9i10-j11k-12l13m-14n15o16p17q22",
           "Texto": "Concordo e faço comentários semelhantes.",
           "Valor": -10
         }
       ]
     },
     {
-      "Id": "6f7g8h9i-10j11-k12l-13m14n-15o16p17q18r19",
+      "Key": "6f7g8h9i-10j11-k12l-13m14n-15o16p17q18r19",
       "Texto": "O que você faria se soubesse que um amigo próximo tem atitudes preconceituosas em relação a imigrantes?",
       "Respostas": [
         {
+          "Key": "6f7g8h9i-10j11-k12l-13m14n-15o16p17q18r20",
           "Texto": "Converso com meu amigo sobre o impacto negativo de suas atitudes.",
-          "Valor": 10
+          "Valor": 21
         },
         {
+          "Key": "6f7g8h9i-10j11-k12l-13m14n-15o16p17q18r21",
           "Texto": "Evito falar sobre o assunto para manter a paz.",
           "Valor": 0
         },
         {
+          "Key": "6f7g8h9i-10j11-k12l-13m14n-15o16p17q18r22",
           "Texto": "Concordo com meu amigo em algumas situações.",
           "Valor": -5
         },
         {
+          "Key": "6f7g8h9i-10j11-k12l-13m14n-15o16p17q18r23",
           "Texto": "Apoio abertamente as opiniões do meu amigo.",
           "Valor": -10
         }
       ]
-    },
-    {
-      "Id": "d17f8e9e-dff9-4a2c-9fa0-1d2ec6d49e08",
-      "Texto": "O que você faria se visse alguém sendo discriminado por causa da sua cor de pele?",
-      "Respostas": [
-        {
-          "Texto": "Intervenho imediatamente e ofereço apoio à pessoa discriminada.",
-          "Valor": 10
-        },
-        {
-          "Texto": "Gravo a situação para ter provas e depois reporto às autoridades competentes.",
-          "Valor": 5
-        },
-        {
-          "Texto": "Ignoro a situação e sigo meu caminho.",
-          "Valor": -5
-        },
-        {
-          "Texto": "Acho que a pessoa deve resolver o problema sozinha.",
-          "Valor": -10
-        }
-      ]
-    },
-    {
-      "Id": "e7f5e2d1-9d25-4b58-91ef-2d7151eac34b",
-      "Texto": "Qual planeta é conhecido como o Planeta Vermelho?",
-      "Respostas": [
-        {
-          "Texto": "Marte",
-          "Valor": 1
-        },
-        {
-          "Texto": "Júpiter",
-          "Valor": 0
-        },
-        {
-          "Texto": "Vênus",
-          "Valor": 0
-        }
-      ]
-    },
-    {
-      "Id": "5c9b9b19-b9f6-4ae5-9388-89eec1d1f4a3",
-      "Texto": "Qual é o maior oceano da Terra?",
-      "Respostas": [
-        {
-          "Texto": "Oceano Pacífico",
-          "Valor": 2
-        },
-        {
-          "Texto": "Oceano Atlântico",
-          "Valor": 0
-        },
-        {
-          "Texto": "Oceano Índico",
-          "Valor": 0
-        }
-      ]
-    },
-    {
-      "Id": "7b49a7d7-68a6-4d8e-89c1-5b5f8c19c28e",
-      "Texto": "Quem escreveu 'O Sol é para Todos'?",
-      "Respostas": [
-        {
-          "Texto": "Harper Lee",
-          "Valor": 10
-        },
-        {
-          "Texto": "Mark Twain",
-          "Valor": 0
-        },
-        {
-          "Texto": "Ernest Hemingway",
-          "Valor": 0
-        }
-      ]
-    },
-    {
-      "Id": "4e17d9b9-92b4-4825-9838-9e9e7f2c5c39",
-      "Texto": "Qual é o menor número primo?",
-      "Respostas": [
-        {
-          "Texto": "2",
-          "Valor": 5
-        },
-        {
-          "Texto": "1",
-          "Valor": 0
-        },
-        {
-          "Texto": "3",
-          "Valor": -1
-        }
-      ]
-    },
-    {
-      "Id": "d17b1c3e-5a8f-45f6-9f1a-2b7b1d1c5b3a",
-      "Texto": "Qual é a montanha mais alta do mundo?",
-      "Respostas": [
-        {
-          "Texto": "Monte Everest",
-          "Valor": 4
-        },
-        {
-          "Texto": "K2",
-          "Valor": -1
-        },
-        {
-          "Texto": "Kangchenjunga",
-          "Valor": -1
-        }
-      ]
-    },
-    {
-      "Id": "a87b9c9d-5d9e-4bfa-9e9a-2b7d1e9c4b5a",
-      "Texto": "Quem pintou a Mona Lisa?",
-      "Respostas": [
-        {
-          "Texto": "Leonardo da Vinci",
-          "Valor": 5
-        },
-        {
-          "Texto": "Vincent van Gogh",
-          "Valor": 2
-        },
-        {
-          "Texto": "Pablo Picasso",
-          "Valor": 1
-        }
-      ]
-    },
-    {
-      "Id": "5c2f8d3d-9d1a-4e5b-91a5-2d7c5e2b3d5c",
-      "Texto": "Qual é o rio mais longo do mundo?",
-      "Respostas": [
-        {
-          "Texto": "Rio Nilo",
-          "Valor": 10
-        },
-        {
-          "Texto": "Rio Amazonas",
-          "Valor": 8
-        },
-        {
-          "Texto": "Rio Yangtzé",
-          "Valor": -3
-        }
-      ]
-    },
-    {
-      "Id": "7c1e9d2e-8f9a-4d5e-91b1-2d7e1e3c4d5c",
-      "Texto": "Quem descobriu a teoria da relatividade?",
-      "Respostas": [
-        {
-          "Texto": "Albert Einstein",
-          "Valor": 1
-        },
-        {
-          "Texto": "Isaac Newton",
-          "Valor": 0
-        },
-        {
-          "Texto": "Galileu Galilei",
-          "Valor": -3
-        }
-      ]
-    },
-    {
-      "Id": "5b2f8d3d-9c1a-4e5b-91d5-2d7c5e2b3d5a",
-      "Texto": "Qual é o país mais populoso do mundo?",
-      "Respostas": [
-        {
-          "Texto": "China",
-          "Valor": 10
-        },
-        {
-          "Texto": "Índia",
-          "Valor": 8
-        },
-        {
-          "Texto": "Estados Unidos",
-          "Valor": 3
-        }
-      ]
-    },
-    {
-      "Id": "4c1e8d2e-9f9a-4b5e-91d1-2d7e1e3c4d5b",
-      "Texto": "Qual é a capital do Japão?",
-      "Respostas": [
-        {
-          "Texto": "Tóquio",
-          "Valor": 10
-        },
-        {
-          "Texto": "Osaka",
-          "Valor": 5
-        },
-        {
-          "Texto": "Quioto",
-          "Valor": 3
-        }
-      ]
-    },
-    {
-      "Id": "7b2d8d3d-9c1b-4e5a-91f5-2d7c5e2c3d5a",
-      "Texto": "Quem escreveu 'Dom Quixote'?",
-      "Respostas": [
-        {
-          "Texto": "Miguel de Cervantes",
-          "Valor": 10
-        },
-        {
-          "Texto": "William Shakespeare",
-          "Valor": 5
-        },
-        {
-          "Texto": "Gabriel García Márquez",
-          "Valor": 2
-        }
-      ]
-    },
-    {
-      "Id": "3c1e8d2e-9b9a-4e5b-91d1-2d7e1e3c4d5b",
-      "Texto": "Qual é o maior deserto do mundo?",
-      "Respostas": [
-        {
-          "Texto": "Deserto do Saara",
-          "Valor": 8
-        },
-        {
-          "Texto": "Deserto de Gobi",
-          "Valor": 5
-        },
-        {
-          "Texto": "Deserto da Arábia",
-          "Valor": 3
-        }
-      ]
-    },
-    {
-      "Id": "5d1f8c3d-9b1a-4e5c-91d5-2d7c5e2c3d5a",
-      "Texto": "Qual é o menor país do mundo?",
-      "Respostas": [
-        {
-          "Texto": "Vaticano",
-          "Valor": 6
-        },
-        {
-          "Texto": "Mônaco",
-          "Valor": 5
-        },
-        {
-          "Texto": "Nauru",
-          "Valor": 3
-        }
-      ]
-    },
-    {
-      "Id": "2b1e8d3d-9c1a-4e5b-91d5-2d7e5e2b3d5a",
-      "Texto": "Quem inventou a lâmpada elétrica?",
-      "Respostas": [
-        {
-          "Texto": "Thomas Edison",
-          "Valor": 7
-        },
-        {
-          "Texto": "Nikola Tesla",
-          "Valor": 5
-        },
-        {
-          "Texto": "Alexander Graham Bell",
-          "Valor": 3
-        }
-      ]
-    },
-    {
-      "Id": "5d1e8d2d-9b1a-4e5a-91d1-2d7c5e2c3d5a",
-      "Texto": "Qual é a capital do Brasil?",
-      "Respostas": [
-        {
-          "Texto": "Brasília",
-          "Valor": 9
-        },
-        {
-          "Texto": "Rio de Janeiro",
-          "Valor": 5
-        },
-        {
-          "Texto": "São Paulo",
-          "Valor": 3
-        }
-      ]
-    },
-    {
-      "Id": "7c1d8d2e-9f1a-4b5e-91d1-2d7e5e2c3d5a",
-      "Texto": "Qual é o maior planeta do sistema solar?",
-      "Respostas": [
-        {
-          "Texto": "Júpiter",
-          "Valor": 11
-        },
-        {
-          "Texto": "Saturno",
-          "Valor": 5
-        },
-        {
-          "Texto": "Netuno",
-          "Valor": 3
-        }
-      ]
-    },
-    {
-      "Id": "4b1e8d2e-9b9a-4e5b-91d5-2d7e1e3c4d5a",
-      "Texto": "Qual é a língua mais falada no mundo?",
-      "Respostas": [
-        {
-          "Texto": "Mandarim",
-          "Valor": 80
-        },
-        {
-          "Texto": "Inglês",
-          "Valor": 8
-        },
-        {
-          "Texto": "Espanhol",
-          "Valor": 5
-        }
-      ]
-    },
-    {
-      "Id": "3d1f8c3d-9b1a-4e5b-91d1-2d7c5e2c3d5a",
-      "Texto": "Quem é conhecido como o pai da computação?",
-      "Respostas": [
-        {
-          "Texto": "Alan Turing",
-          "Valor": 5
-        },
-        {
-          "Texto": "Charles Babbage",
-          "Valor": 3
-        },
-        {
-          "Texto": "John von Neumann",
-          "Valor": -5
-        }
-      ]
-    },
-    {
-      "Id": "6b1e8d2d-9b9a-4e5b-91d1-2d7e1e3c4d5a",
-      "Texto": "Qual é o metal mais abundante na Terra?",
-      "Respostas": [
-        {
-          "Texto": "Alumínio",
-          "Valor": 10
-        },
-        {
-          "Texto": "Ferro",
-          "Valor": 8
-        },
-        {
-          "Texto": "Cobre",
-          "Valor": 5
-        }
-      ]
-    },
-    {
-      "Id": "5d1e8d2d-9b9a-4e5b-91d1-2d7e1e3c4d5a",
-      "Texto": "Qual é a fórmula química da água?",
-      "Respostas": [
-        {
-          "Texto": "H2O",
-          "Valor": 13
-        },
-        {
-          "Texto": "CO2",
-          "Valor": 0
-        },
-        {
-          "Texto": "O2",
-          "Valor": 0
-        }
-      ]
-    },
-    {
-      "Id": "4d1e8c2d-9b1a-4e5b-91d1-2d7e1e3c4d5a",
-      "Texto": "Quem escreveu '1984'?",
-      "Respostas": [
-        {
-          "Texto": "George Orwell",
-          "Valor": 100
-        },
-        {
-          "Texto": "Aldous Huxley",
-          "Valor": 5
-        },
-        {
-          "Texto": "Ray Bradbury",
-          "Valor": 3
-        }
-      ]
-    },
-    {
-      "Id": "7d1f8c2d-9b1a-4e5b-91d1-2d7c5e2c3d5a",
-      "Texto": "Qual é o órgão mais pesado do corpo humano?",
-      "Respostas": [
-        {
-          "Texto": "Fígado",
-          "Valor": 14
-        },
-        {
-          "Texto": "Cérebro",
-          "Valor": 5
-        },
-        {
-          "Texto": "Pulmão",
-          "Valor": 3
-        }
-      ]
-    },
-    {
-      "Id": "2d1e8d3d-9b9a-4e5b-91d1-2d7e1e3c4d5a",
-      "Texto": "Quem foi o primeiro homem a pisar na Lua?",
-      "Respostas": [
-        {
-          "Texto": "Neil Armstrong",
-          "Valor": 18
-        },
-        {
-          "Texto": "Buzz Aldrin",
-          "Valor": 5
-        },
-        {
-          "Texto": "Yuri Gagarin",
-          "Valor": 3
-        }
-      ]
-    },
-    {
-      "Id": "5c1e8d2e-9b1a-4e5b-91d1-2d7e1e3c4d5a",
-      "Texto": "Qual é o maior país da América do Sul?",
-      "Respostas": [
-        {
-          "Texto": "Brasil",
-          "Valor": 10
-        },
-        {
-          "Texto": "Argentina",
-          "Valor": 5
-        },
-        {
-          "Texto": "Peru",
-          "Valor": 3
-        }
-      ]
     }
-
   ]
 }

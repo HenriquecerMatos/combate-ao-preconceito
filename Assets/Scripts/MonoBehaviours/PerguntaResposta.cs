@@ -1,10 +1,15 @@
 using Entities;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class PerguntaResposta : MonoBehaviour
 {
+    public JogoController Controller;
+    [Space(5)]
     public TMP_Text PerguntaTexto;
     public Transform AlternativaExemplo;
     public Pergunta Pergunta;
@@ -12,21 +17,38 @@ public class PerguntaResposta : MonoBehaviour
     public RectTransform AlternativaSelecionada;
     public Color CorAlternativaSelecionada = Color.green;
     public Color CorAlternativaPadrao = Color.white;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    [Space(10)]
+    public GameObject[] ListaDeObjetosIgnoradosAoSeTornarVisivel;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void CriarPerguntaAlternativas()
+    public void ApagarAlternativasGeradas()
     {
         Alternativas = new();
+        Transform[] listaDeletar = GetComponentsInChildren<Transform>();
+
+        var listaParaRemover =new  List<GameObject>();
+        for (int i = 0; i < listaDeletar.Count(); i++)
+        {
+            var item = listaDeletar[i];
+            if (!ListaDeObjetosIgnoradosAoSeTornarVisivel.Contains(item.gameObject) && item != transform)
+            {
+                listaParaRemover.Add(item.gameObject);
+            }
+        }
+
+        foreach (var item in listaParaRemover)
+        {
+            Destroy(item);
+        }
+
+
+        Debug.Log("OnBecameVisible");
+    }
+
+   
+    public void CriarPerguntaAlternativas()
+    {
+        ApagarAlternativasGeradas();
+
         var tmpPergunta = PerguntaTexto;
         tmpPergunta.text = Pergunta.Texto;
         for (int i = 0; i < Pergunta.Respostas.Length; i++)
@@ -36,8 +58,16 @@ public class PerguntaResposta : MonoBehaviour
             // Define o objeto clonado como filho do objeto pai
             clone.transform.SetParent(transform);
 
-            clone.GetComponent<AlternativaElemento>().Header.text = $"{i+1}° Alternativa";
-            clone.GetComponent<AlternativaElemento>().Alternativa.text = Pergunta.Respostas[i].Texto;
+            var cloneAlternativaElemento = clone.GetComponent<AlternativaElemento>();
+            cloneAlternativaElemento.Header.text = $"{i + 1}° Alternativa";
+            cloneAlternativaElemento.Alternativa.text = Pergunta.Respostas[i].Texto;
+
+            cloneAlternativaElemento.RespostaSelecionada = new()
+            {
+                PerguntaKey = Pergunta.Key,
+                RepostaKey = Pergunta.Respostas[i].Key,
+                Valor = Pergunta.Respostas[i].Valor
+            };
 
             //ativa o elemento
             clone.SetActive(true);
@@ -58,5 +88,17 @@ public class PerguntaResposta : MonoBehaviour
             e.GetComponent<UnityEngine.UI.Image>().color = CorAlternativaPadrao;
         });
         AlternativaSelecionada.GetComponent<UnityEngine.UI.Image>().color = CorAlternativaSelecionada;
+
+        var alternativas = elemento.GetComponent<AlternativaElemento>();
+        if (alternativas != null)
+        {
+            var perguntaResposta = alternativas.RespostaSelecionada;
+            if (perguntaResposta is not null)
+            {
+                Controller.UserController.CalcularPontuacao(perguntaResposta);
+            }
+        }
+
+        gameObject.SetActive(false);
     }
 }

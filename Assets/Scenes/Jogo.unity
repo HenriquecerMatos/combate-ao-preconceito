@@ -1738,7 +1738,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pergunta:
-    Id: 
+    Id: 0
+    Key: 
     Texto: 
     Respostas: []
 --- !u!1 &412459553
@@ -4168,6 +4169,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Header: {fileID: 265463440}
   Alternativa: {fileID: 1923949773}
+  RespostaSelecionada:
+    PerguntaKey: 
+    RepostaKey: 
+    Valor: 0
 --- !u!1 &1000373414
 GameObject:
   m_ObjectHideFlags: 0
@@ -4338,6 +4343,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 0
+--- !u!1 &1023238001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023238002}
+  - component: {fileID: 1023238003}
+  m_Layer: 0
+  m_Name: JogoController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1023238002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023238001}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 126.825005, y: 310.02072, z: 36.824837}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1023238003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023238001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e207d02c1b43a9644b460c9d8e01b362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UserController: {fileID: 0}
+  Pontuacao: {fileID: 1761953230}
 --- !u!1 &1025975478
 GameObject:
   m_ObjectHideFlags: 0
@@ -9398,7 +9449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8627451, g: 0.8627451, b: 0.8627451, a: 1}
+  m_Color: {r: 0.8627451, g: 0.8627451, b: 0.8627451, a: 0.47058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9518,16 +9569,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1aeb8cf6a7b724589c5959817e1c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Controller: {fileID: 1023238003}
   PerguntaTexto: {fileID: 2021349281}
   AlternativaExemplo: {fileID: 953594901}
   Pergunta:
-    Id: 
+    Id: 0
+    Key: 
     Texto: 
     Respostas: []
   Alternativas: []
   AlternativaSelecionada: {fileID: 0}
   CorAlternativaSelecionada: {r: 0, g: 1, b: 0, a: 1}
   CorAlternativaPadrao: {r: 1, g: 1, b: 1, a: 1}
+  ListaDeObjetosIgnoradosAoSeTornarVisivel:
+  - {fileID: 713371168}
+  - {fileID: 1090171609}
+  - {fileID: 2021349279}
+  - {fileID: 953594900}
+  - {fileID: 265463438}
+  - {fileID: 1923949771}
 --- !u!1 &1968392931
 GameObject:
   m_ObjectHideFlags: 0
@@ -10064,3 +10124,4 @@ SceneRoots:
   - {fileID: 1403419176}
   - {fileID: 1255311874}
   - {fileID: 3223432}
+  - {fileID: 1023238002}

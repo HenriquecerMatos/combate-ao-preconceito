@@ -16,11 +16,13 @@ public class UserController : MonoBehaviour
     [SerializeField]
     public DificuldadeEnum Dificuldade;
 
-    public ListaPerguntasRespostas RespostasAcumuladasDaPartida;
-    public List<ListaPerguntasRespostas> HistoricoResposta;
+    public float Pontuacao=0;
+
+    public ListaRespostasDadas RespostasAcumuladasDaPartida;
+    public List<ListaRespostasDadas> HistoricoResposta;
 
     [SerializeField]
-    public Caracteristicas Caracteristicas { get; set; } = new Caracteristicas();
+    public Caracteristicas Caracteristicas{get;set;} = new Caracteristicas();
 
     public static UserController Instance { get; private set; }
     void Awake()
@@ -46,10 +48,24 @@ public class UserController : MonoBehaviour
     public void SetDificuldade(DificuldadeEnum dificuldade)
     {
         Dificuldade = dificuldade;
-        Debug.Log(dificuldade.ValorDescription() + "-" + dificuldade.ValorPeso());
+        Debug.Log(dificuldade.ValorDescription() + "-" + dificuldade.ValorPeso());        
     }
 
+    #region pontuação
+    public void CalcularPontuacao(RespostaSelecionada resposta)
+    {
+        var valorCalculado = Caracteristicas.ValorCalculadoApartirDasCaracteisticas(resposta.Valor);
+        Pontuacao += valorCalculado;
+        RespostasAcumuladasDaPartida.listaPerguntasRespostas.Add(resposta);
 
+
+        //pensando em uma provável alteração onde a pessoa possa mudar alguma característica ao longo do jogo vou deixar essa linha aqui 
+        //normalmente ela ficaria no starUp 
+        RespostasAcumuladasDaPartida.Caracteristicas = Caracteristicas;
+    }
+    #endregion
+
+    #region Historico
     public void SalvarArquivoHistorico()
     {
         string filePath = Path.Combine(Application.persistentDataPath, PastaHistorico, DateTime.Now.Ticks + ".json");
@@ -72,7 +88,7 @@ public class UserController : MonoBehaviour
                 Debug.Log("Arquivo encontrado: " + arquivo);
                 try
                 {
-                    var noHistorico = JsonUtility.FromJson<ListaPerguntasRespostas>(arquivo);
+                    var noHistorico = JsonUtility.FromJson<ListaRespostasDadas>(arquivo);
                     HistoricoResposta.Add(noHistorico);
                 }
                 catch (Exception)
@@ -86,4 +102,5 @@ public class UserController : MonoBehaviour
             Debug.LogWarning("A pasta não existe ou está vazia.");
         }
     }
+    #endregion
 }
