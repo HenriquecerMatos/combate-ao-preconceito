@@ -6,7 +6,7 @@ namespace Entities
     [System.Serializable]
     public class ListaPerguntas
     {
-        public Pergunta[] Perguntas;
+        public List<Pergunta> Perguntas;
     }
 
     [System.Serializable]

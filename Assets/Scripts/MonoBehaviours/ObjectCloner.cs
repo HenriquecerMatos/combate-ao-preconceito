@@ -1,6 +1,6 @@
 using Entities;
 using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -33,7 +33,7 @@ public class ObjectCloner : MonoBehaviour
 
     private IEnumerator CloneObjects()
     {
-        while (true)
+        while (Perguntas.Perguntas.Count() > 0)
         {
             // Instancia um clone do objeto
             GameObject clone = Instantiate(objectToClone, GetRandomSpawnPosition(), Quaternion.identity);
@@ -41,13 +41,19 @@ public class ObjectCloner : MonoBehaviour
             clone.transform.SetParent(transform);
 
             //randomiza uma pergunta 
-            var perguntaRando = Random.Range(0, Perguntas.Perguntas.Length);
+            var perguntaRando = Random.Range(0, Perguntas.Perguntas.Count());
             var perguntaSelecionada = Perguntas.Perguntas[perguntaRando];
             clone.GetComponent<PerguntaDroper>().Pergunta = perguntaSelecionada;
             //ativa o elemento
             clone.SetActive(true);
             // Aguarda o próximo intervalo
+            Perguntas.Perguntas.Remove(perguntaSelecionada);
             yield return new WaitForSeconds(cloneInterval);
+        }
+        if (Perguntas.Perguntas.Count() == 0)
+        {
+            Debug.Log("Finalizar jogo em 5 Sec");
+            yield return new WaitForSeconds(5);
         }
     }
 

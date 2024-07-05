@@ -3,6 +3,7 @@
     {
       "Key": "1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m14",
       "Texto": "O que você faria se visse alguém sendo discriminado por causa da sua cor de pele?",
+      "TipoAtividade": 3,
       "Respostas": [
         {
           "Key": "1a2b3c4d-5e6f-7g8h-9i10-j11k12l13m15",
@@ -29,6 +30,7 @@
     {
       "Key": "2b3c4d5e-6f7g-8h9i-10j11-k12l13m14n15",
       "Texto": "Como você reage quando ouve uma piada racista em um grupo de amigos?",
+      "TipoAtividade": 3,
       "Respostas": [
         {
           "Key": "2b3c4d5e-6f7g-8h9i-10j11-k12l13m14n16",
@@ -55,6 +57,7 @@
     {
       "Key": "3c4d5e6f-7g8h-9i10-j11k12-l13m14n15o16",
       "Texto": "Como você agiria se alguém na sua empresa fizesse comentários negativos sobre a religião de um colega?",
+      "TipoAtividade": 3,
       "Respostas": [
         {
           "Key": "3c4d5e6f-7g8h-9i10-j11k12-l13m14n15o17",
@@ -81,6 +84,7 @@
     {
       "Key": "4d5e6f7g-8h9i-10j11-k12l13-m14n15o16p17",
       "Texto": "O que você faria se visse uma pessoa com deficiência sendo excluída de uma atividade social?",
+      "TipoAtividade": 3,
       "Respostas": [
         {
           "Key": "4d5e6f7g-8h9i-10j11-k12l13-m14n15o16p18",
@@ -107,6 +111,7 @@
     {
       "Key": "5e6f7g8h-9i10-j11k-12l13m-14n15o16p17q18",
       "Texto": "Como você reage quando alguém faz um comentário estereotipado sobre um grupo étnico específico?",
+      "TipoAtividade": 3,
       "Respostas": [
         {
           "Key": "5e6f7g8h-9i10-j11k-12l13m-14n15o16p17q19",
@@ -133,6 +138,7 @@
     {
       "Key": "6f7g8h9i-10j11-k12l-13m14n-15o16p17q18r19",
       "Texto": "O que você faria se soubesse que um amigo próximo tem atitudes preconceituosas em relação a imigrantes?",
+      "TipoAtividade": 3,
       "Respostas": [
         {
           "Key": "6f7g8h9i-10j11-k12l-13m14n-15o16p17q18r20",
@@ -152,6 +158,249 @@
         {
           "Key": "6f7g8h9i-10j11-k12l-13m14n-15o16p17q18r23",
           "Texto": "Apoio abertamente as opiniões do meu amigo.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Key": "7g8h9i10-j11k-12l13-m14n-15o16p17q18r19s20",
+      "Texto": "O que você faria se visse um colega sendo discriminado por sua orientação sexual?",
+      "TipoAtividade": 3,
+      "Respostas": [
+        {
+          "Key": "7g8h9i10-j11k-12l13-m14n-15o16p17q18r20s21",
+          "Texto": "Denuncio a discriminação aos superiores imediatamente.",
+          "Valor": 20
+        },
+        {
+          "Key": "7g8h9i10-j11k-12l13-m14n-15o16p17q18r21s22",
+          "Texto": "Confronto a pessoa que está discriminando.",
+          "Valor": 10
+        },
+        {
+          "Key": "7g8h9i10-j11k-12l13-m14n-15o16p17q18r22s23",
+          "Texto": "Finjo que não vejo nada para evitar conflitos.",
+          "Valor": -5
+        },
+        {
+          "Key": "7g8h9i10-j11k-12l13-m14n-15o16p17q18r23s24",
+          "Texto": "Concordo com a discriminação.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Key": "8h9i10j11-k12l-13m14-n15o16-p17q18r19s20t21",
+      "Texto": "Como você reagiria se um familiar próximo fizesse comentários depreciativos sobre um grupo minoritário?",
+      "TipoAtividade": 3,
+      "Respostas": [
+        {
+          "Key": "8h9i10j11-k12l-13m14-n15o16-p17q18r19s20t22",
+          "Texto": "Discuto com o familiar sobre por que esses comentários são prejudiciais.",
+          "Valor": 12
+        },
+        {
+          "Key": "8h9i10j11-k12l-13m14-n15o16-p17q18r19s21t23",
+          "Texto": "Evito o assunto e tento mudar a conversa.",
+          "Valor": 0
+        },
+        {
+          "Key": "8h9i10j11-k12l-13m14-n15o16-p17q18r19s22t24",
+          "Texto": "Concordo com o familiar para evitar conflitos.",
+          "Valor": -5
+        },
+        {
+          "Key": "8h9i10j11-k12l-13m14-n15o16-p17q18r19s23t25",
+          "Texto": "Faço comentários semelhantes para apoiar o familiar.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Key": "9i10j11k12-l13m-14n15o-16p17q-18r19s20t21u22",
+      "Texto": "O que você faria se presenciasse um ato de xenofobia em um evento público?",
+      "TipoAtividade": 1,
+      "Respostas": [
+        {
+          "Key": "9i10j11k12-l13m-14n15o-16p17q-18r19s20t22u23",
+          "Texto": "Denuncio imediatamente às autoridades presentes.",
+          "Valor": 15
+        },
+        {
+          "Key": "9i10j11k12-l13m-14n15o-16p17q-18r19s20t23u24",
+          "Texto": "Gravo a situação como prova e compartilho nas redes sociais.",
+          "Valor": 5
+        },
+        {
+          "Key": "9i10j11k12-l13m-14n15o-16p17q-18r19s20t24u25",
+          "Texto": "Finjo que não vi nada e continuo com o que estava fazendo.",
+          "Valor": -5
+        },
+        {
+          "Key": "9i10j11k12-l13m-14n15o-16p17q-18r19s20t25u26",
+          "Texto": "Concordo e apoio o ato de xenofobia.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Key": "10j11k12l-13m14n-15o16p-17q18r-19s20t21u22v23",
+      "Texto": "Como você reagiria se descobrisse que um amigo seu tem preconceitos contra um grupo específico?",
+      "TipoAtividade": 3,
+      "Respostas": [
+        {
+          "Key": "10j11k12l-13m14n-15o16p-17q18r-19s20t21u22v24",
+          "Texto": "Converso com ele e tento educá-lo sobre a importância da diversidade.",
+          "Valor": 20
+        },
+        {
+          "Key": "10j11k12l-13m14n-15o16p-17q18r-19s20t21u23v25",
+          "Texto": "Evito falar sobre o assunto para manter a paz.",
+          "Valor": 0
+        },
+        {
+          "Key": "10j11k12l-13m14n-15o16p-17q18r-19s20t21u24v26",
+          "Texto": "Concordo com algumas de suas opiniões.",
+          "Valor": -5
+        },
+        {
+          "Key": "10j11k12l-13m14n-15o16p-17q18r-19s20t21u25v27",
+          "Texto": "Apoio abertamente suas opiniões preconceituosas.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Key": "11k12l13m-14n15o-16p17q-18r19s-20t21u22v23w24",
+      "Texto": "O que você faria se visse uma pessoa idosa sendo maltratada em um transporte público?",
+      "TipoAtividade": 1,
+      "Respostas": [
+        {
+          "Key": "11k12l13m-14n15o-16p17q-18r19s-20t21u22v23w25",
+          "Texto": "Intervenho e tento ajudar a pessoa idosa.",
+          "Valor": 15
+        },
+        {
+          "Key": "11k12l13m-14n15o-16p17q-18r19s-20t21u22v24w26",
+          "Texto": "Denuncio o maltrato ao motorista ou condutor.",
+          "Valor": 10
+        },
+        {
+          "Key": "11k12l13m-14n15o-16p17q-18r19s-20t21u22v25w27",
+          "Texto": "Ignoro a situação e sigo minha viagem.",
+          "Valor": -5
+        },
+        {
+          "Key": "11k12l13m-14n15o-16p17q-18r19s-20t21u22v26w28",
+          "Texto": "Concordo com o maltrato.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Key": "12l13m14n-15o16p-17q18r-19s20t-21u22v23w24x25",
+      "Texto": "Como você reagiria se soubesse que um colega de trabalho está sofrendo assédio moral?",
+      "TipoAtividade": 5,
+      "Respostas": [
+        {
+          "Key": "12l13m14n-15o16p-17q18r-19s20t-21u22v23w25x26",
+          "Texto": "Reporto imediatamente ao departamento de Recursos Humanos.",
+          "Valor": 20
+        },
+        {
+          "Key": "12l13m14n-15o16p-17q18r-19s20t-21u22v23w26x27",
+          "Texto": "Ofereço apoio ao colega e incentivo a denunciar.",
+          "Valor": 10
+        },
+        {
+          "Key": "12l13m14n-15o16p-17q18r-19s20t-21u22v23w27x28",
+          "Texto": "Ignoro a situação para evitar problemas.",
+          "Valor": -5
+        },
+        {
+          "Key": "12l13m14n-15o16p-17q18r-19s20t-21u22v23w28x29",
+          "Texto": "Concordo com o assédio.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Key": "13m14n15o-16p17q-18r19s-20t21u-22v23w24x25y26",
+      "Texto": "O que você faria se visse uma criança sendo discriminada na escola por suas roupas?",
+      "TipoAtividade": 2,
+      "Respostas": [
+        {
+          "Key": "13m14n15o-16p17q-18r19s-20t21u-22v23w24x26y27",
+          "Texto": "Converso com os professores sobre a situação.",
+          "Valor": 10
+        },
+        {
+          "Key": "13m14n15o-16p17q-18r19s-20t21u-22v23w24x27y28",
+          "Texto": "Apoio a criança e tento incluí-la em atividades.",
+          "Valor": 5
+        },
+        {
+          "Key": "13m14n15o-16p17q-18r19s-20t21u-22v23w24x28y29",
+          "Texto": "Ignoro a situação e continuo com minhas atividades.",
+          "Valor": -5
+        },
+        {
+          "Key": "13m14n15o-16p17q-18r19s-20t21u-22v23w24x29y30",
+          "Texto": "Concordo com a discriminação e faço comentários semelhantes.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Key": "14n15o16p-17q18r-19s20t-21u22v-23w24x25y26z27",
+      "Texto": "Como você reagiria se um colega de trabalho fizesse comentários depreciativos sobre a aparência de outro colega?",
+      "TipoAtividade": 5,
+      "Respostas": [
+        {
+          "Key": "14n15o16p-17q18r-19s20t-21u22v-23w24x25y26z28",
+          "Texto": "Reporto ao departamento de Recursos Humanos.",
+          "Valor": 15
+        },
+        {
+          "Key": "14n15o16p-17q18r-19s20t-21u22v-23w24x25y27z29",
+          "Texto": "Converso com a pessoa sobre os efeitos negativos de seus comentários.",
+          "Valor": 10
+        },
+        {
+          "Key": "14n15o16p-17q18r-19s20t-21u22v-23w24x25y28z30",
+          "Texto": "Ignoro os comentários para evitar conflitos.",
+          "Valor": -5
+        },
+        {
+          "Key": "14n15o16p-17q18r-19s20t-21u22v-23w24x25y29z31",
+          "Texto": "Concordo e faço comentários semelhantes.",
+          "Valor": -10
+        }
+      ]
+    },
+    {
+      "Key": "15o16p17q-18r19s-20t21u-22v23w-24x25y26z27a28",
+      "Texto": "O que você faria se um amigo seu fosse discriminado em um restaurante por sua nacionalidade?",
+      "TipoAtividade": 5,
+      "Respostas": [
+        {
+          "Key": "15o16p17q-18r19s-20t21u-22v23w-24x25y26z28a29",
+          "Texto": "Exijo uma explicação do gerente do restaurante e defendo meu amigo.",
+          "Valor": 25
+        },
+        {
+          "Key": "15o16p17q-18r19s-20t21u-22v23w-24x25y26z29a30",
+          "Texto": "Apoio meu amigo e deixo uma avaliação negativa do restaurante.",
+          "Valor": 10
+        },
+        {
+          "Key": "15o16p17q-18r19s-20t21u-22v23w-24x25y26z30a31",
+          "Texto": "Finjo que não vejo nada para evitar problemas.",
+          "Valor": -5
+        },
+        {
+          "Key": "15o16p17q-18r19s-20t21u-22v23w-24x25y26z31a32",
+          "Texto": "Concordo com a discriminação e apoio o restaurante.",
           "Valor": -10
         }
       ]

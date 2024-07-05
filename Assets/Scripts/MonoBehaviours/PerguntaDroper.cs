@@ -4,15 +4,8 @@ using UnityEngine;
 public class PerguntaDroper : MonoBehaviour
 {
     public Pergunta Pergunta;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+   public void DestroirDroper()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Destroy(gameObject);
     }
 }

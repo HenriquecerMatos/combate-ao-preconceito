@@ -7,11 +7,11 @@ public enum TipoAtividadeEnum
 {
     [Description("Não Definida")]
     NaoDefinida,
-    [Description("Eventos")]
+    [Description("Eventos")]//esportivos, religiosos, cívicos, regionais
     Eventos,
-    [Description("Exames e Provas")]
+    [Description("Exames e Provas")] 
     ExamesProvas,
-    [Description("Dilemas")]
+    [Description("Dilemas")]//envolvendo escolhas pessoais
     Dilemas,
     [Description("Oportunidades e Desafios")]
     OportunidadesDesafios,

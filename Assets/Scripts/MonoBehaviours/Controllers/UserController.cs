@@ -18,7 +18,7 @@ public class UserController : MonoBehaviour
 
     public float Pontuacao=0;
 
-    public ListaRespostasDadas RespostasAcumuladasDaPartida;
+    public ListaRespostasDadas RespostasAcumuladasDaPartida = new();
     public List<ListaRespostasDadas> HistoricoResposta;
 
     [SerializeField]
@@ -57,7 +57,6 @@ public class UserController : MonoBehaviour
         var valorCalculado = Caracteristicas.ValorCalculadoApartirDasCaracteisticas(resposta.Valor);
         Pontuacao += valorCalculado;
         RespostasAcumuladasDaPartida.listaPerguntasRespostas.Add(resposta);
-
 
         //pensando em uma provável alteração onde a pessoa possa mudar alguma característica ao longo do jogo vou deixar essa linha aqui 
         //normalmente ela ficaria no starUp 
