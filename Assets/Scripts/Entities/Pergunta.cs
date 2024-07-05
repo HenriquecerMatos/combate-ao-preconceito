@@ -10,7 +10,7 @@ namespace Entities
     }
 
     [System.Serializable]
-    public class Pergunta: BaseEntity
+    public class Pergunta : BaseEntity
     {
 
         public string Texto;
@@ -25,7 +25,7 @@ namespace Entities
     }
 
     [System.Serializable]
-    public class Resposta: BaseEntity
+    public class Resposta : BaseEntity
     {
         public string Texto;
         public int Valor;
@@ -45,9 +45,31 @@ namespace Entities
     public class ListaRespostasDadas
     {
         public bool Sincronizado;
-        public List<RespostaSelecionada> listaPerguntasRespostas=new();
+        public List<RespostaSelecionada> listaPerguntasRespostas = new();
+        public string Caracteristicas;
+        public float Peso;
         public int ValorTotal() => listaPerguntasRespostas.Sum(x => x.Valor);
-        public Caracteristicas Caracteristicas=new();
+        public float ValorTotalComPeso() => listaPerguntasRespostas.Sum(x => CalculadoApartirDasCaracteisticas(x.Valor));
+
+        private float CalculadoApartirDasCaracteisticas(float entrada)
+        {
+            //float entrada = ValorTotal();
+            var pesoTotal = Peso;
+
+            //se a resposta tiver valor 0 não é necessário calcular
+            if (entrada == 0)
+            {
+                return entrada;
+            }
+            else if (entrada > 0)//se entrada maior q 0 calcula de acordo com o peso
+            {
+                return entrada + (entrada * (pesoTotal) * -1);
+            }
+            else
+            {
+                return entrada - (entrada * (pesoTotal) * -1);
+            }
+        }
     }
 
     [System.Serializable]

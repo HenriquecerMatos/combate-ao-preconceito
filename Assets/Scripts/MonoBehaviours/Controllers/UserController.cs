@@ -9,20 +9,20 @@ using UnityEngine;
 public class UserController : MonoBehaviour
 {
 
-    private readonly string PastaHistorico = "historico";
+    private readonly string PrefixoArquivoHistorico = "historico_";
 
     [SerializeField]
     public SeriesEnum Serie;
     [SerializeField]
     public DificuldadeEnum Dificuldade;
 
-    public float Pontuacao=0;
+    public float Pontuacao = 0;
 
     public ListaRespostasDadas RespostasAcumuladasDaPartida = new();
     public List<ListaRespostasDadas> HistoricoResposta;
 
     [SerializeField]
-    public Caracteristicas Caracteristicas{get;set;} = new Caracteristicas();
+    public Caracteristicas Caracteristicas { get; set; } = new Caracteristicas();
 
     public static UserController Instance { get; private set; }
     void Awake()
@@ -37,6 +37,7 @@ public class UserController : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        LerArquivosHistorico();
     }
 
     public void SetSerie(SeriesEnum serie)
@@ -48,7 +49,7 @@ public class UserController : MonoBehaviour
     public void SetDificuldade(DificuldadeEnum dificuldade)
     {
         Dificuldade = dificuldade;
-        Debug.Log(dificuldade.ValorDescription() + "-" + dificuldade.ValorPeso());        
+        Debug.Log(dificuldade.ValorDescription() + "-" + dificuldade.ValorPeso());
     }
 
     #region pontuação
@@ -60,23 +61,27 @@ public class UserController : MonoBehaviour
 
         //pensando em uma provável alteração onde a pessoa possa mudar alguma característica ao longo do jogo vou deixar essa linha aqui 
         //normalmente ela ficaria no starUp 
-        RespostasAcumuladasDaPartida.Caracteristicas = Caracteristicas;
+        //RespostasAcumuladasDaPartida.Caracteristicas = Caracteristicas;
     }
     #endregion
 
     #region Historico
     public void SalvarArquivoHistorico()
     {
-        string filePath = Path.Combine(Application.persistentDataPath, PastaHistorico, DateTime.Now.Ticks + ".json");
+        string filePath = Path.Combine(Application.persistentDataPath, PrefixoArquivoHistorico + DateTime.Now.Ticks + ".json");
         if (RespostasAcumuladasDaPartida.listaPerguntasRespostas.Count() > 0)
         {
+            RespostasAcumuladasDaPartida.Caracteristicas = Caracteristicas.Descrever();
+            RespostasAcumuladasDaPartida.Peso=Caracteristicas.ValorPeso();
             File.WriteAllText(filePath, JsonUtility.ToJson(RespostasAcumuladasDaPartida));
         }
     }
 
     public void LerArquivosHistorico()
     {
-        string caminhoCompleto = Path.Combine(Application.persistentDataPath, PastaHistorico);
+        HistoricoResposta.Clear();
+
+        string caminhoCompleto = Path.Combine(Application.persistentDataPath);
 
         if (Directory.Exists(caminhoCompleto))
         {
@@ -84,15 +89,18 @@ public class UserController : MonoBehaviour
 
             foreach (string arquivo in arquivos)
             {
-                Debug.Log("Arquivo encontrado: " + arquivo);
-                try
+                if (arquivo.Contains(PrefixoArquivoHistorico))
                 {
-                    var noHistorico = JsonUtility.FromJson<ListaRespostasDadas>(arquivo);
-                    HistoricoResposta.Add(noHistorico);
-                }
-                catch (Exception)
-                {
-                    Debug.Log("Erro de leitura");//throw;
+                    try
+                    {
+                        string conteudoArquivo = File.ReadAllText(arquivo);
+                        var noHistorico = JsonUtility.FromJson<ListaRespostasDadas>(conteudoArquivo);
+                        HistoricoResposta.Add(noHistorico);
+                    }
+                    catch (Exception)
+                    {
+                        Debug.Log("Erro de leitura");//throw;
+                    }
                 }
             }
         }

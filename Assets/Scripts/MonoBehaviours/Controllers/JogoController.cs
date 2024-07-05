@@ -1,8 +1,11 @@
 using TMPro;
+using UnityEngine;
 
 public class JogoController : BaseController
 {
-    public TMP_Text Pontuacao; 
+    public TMP_Text Pontuacao;
+    public TMP_Text PontuacaoResumo;
+    public GameObject PanelFinalizar;
     void Start()
     {
         BuscarSetarUsuario();
@@ -10,7 +13,8 @@ public class JogoController : BaseController
 
     private void Update()
     {
-        Pontuacao.text = UserController.Pontuacao.ToString();        
+        Pontuacao.text = UserController.Pontuacao.ToString("F2");
+        PontuacaoResumo.text = Pontuacao.text;
     }
 
 }

@@ -2,12 +2,14 @@ using Entities;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 
 /// <summary>
 /// Responsável por criar as caixas que caem na cena "Jogo"
 /// </summary>
 public class ObjectCloner : MonoBehaviour
 {
+
     public TextAsset textAsset;
     public GameObject objectToClone; // O objeto que será clonado
     public float cloneInterval = 2f; // Intervalo de tempo entre clones (em segundos)
@@ -19,6 +21,8 @@ public class ObjectCloner : MonoBehaviour
     public Transform PainelPerguntaResposta;
     #endregion
 
+    [Space(20)]
+    public JogoController Controller;
     private void Start()
     {
         // Inicia a rotina para clonar objetos em intervalos
@@ -52,8 +56,12 @@ public class ObjectCloner : MonoBehaviour
         }
         if (Perguntas.Perguntas.Count() == 0)
         {
-            Debug.Log("Finalizar jogo em 5 Sec");
+            Debug.Log("Finalizou");
             yield return new WaitForSeconds(5);
+            Debug.Log("Finalizar jogo em 5 Sec");
+
+            Controller.PanelFinalizar.SetActive(true);
+            Controller.UserController.SalvarArquivoHistorico();
         }
     }
 

@@ -25,13 +25,7 @@ namespace Entities
 
         public float ValorCalculadoApartirDasCaracteisticas(float entrada)
         {
-            var pesoTotal = Sexo.ValorPeso();
-            pesoTotal += Altura.ValorPeso();
-            pesoTotal += Deficiencia.ValorPeso();
-            pesoTotal += Preferencia.ValorPeso();
-            pesoTotal += FaixaEtaria.ValorPeso();
-            pesoTotal += CorDaPeleEtnia.ValorPeso();
-            pesoTotal += Financeiro.ValorPeso();
+            var pesoTotal = ValorPeso();
 
             Debug.Log("entrada:" + entrada + "peso" + pesoTotal + "");
 
@@ -48,6 +42,25 @@ namespace Entities
             {
                 return entrada - (entrada * (pesoTotal) * -1);
             }
+        }
+
+        public string Descrever()
+        {
+            return Sexo.ValorDescription() + ", " + Altura.ValorDescription() +
+            ", " + Deficiencia.ValorDescription() + ", " + Preferencia.ValorDescription() +
+            ", " + FaixaEtaria.ValorDescription() + ", " + CorDaPeleEtnia.ValorDescription() +
+            ", " + Financeiro.ValorDescription();
+        }
+
+        public float ValorPeso()
+        {
+            return Sexo.ValorPeso()
+            + Altura.ValorPeso()
+            + Deficiencia.ValorPeso()
+            + Preferencia.ValorPeso()
+            + FaixaEtaria.ValorPeso()
+            + CorDaPeleEtnia.ValorPeso()
+            + Financeiro.ValorPeso();
         }
     }
 }

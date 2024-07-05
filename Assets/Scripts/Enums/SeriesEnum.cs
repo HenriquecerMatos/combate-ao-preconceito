@@ -174,7 +174,7 @@ public enum FinanceiroEnum
     Rico,
     [Description("Pobre"), Dificuldade(DificuldadeEnum.dificil), Peso(0.025f)] //2,5%
     Pobre,
-    [Description("Miserável"), Dificuldade(DificuldadeEnum.dificil), Peso(0.08f)] //8%
+    [Description("Estado de Miséria"), Dificuldade(DificuldadeEnum.dificil), Peso(0.08f)] //8%
     Miseravel,
 }
 

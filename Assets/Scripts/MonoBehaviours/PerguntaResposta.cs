@@ -9,7 +9,7 @@ using static UnityEditor.Progress;
 public class PerguntaResposta : MonoBehaviour
 {
     public JogoController Controller;
-    [Space(5)]
+    [Space(20)]
     public TMP_Text PerguntaTexto;
     public Transform AlternativaExemplo;
     public Pergunta Pergunta;
@@ -39,9 +39,6 @@ public class PerguntaResposta : MonoBehaviour
         {
             Destroy(item);
         }
-
-
-        Debug.Log("OnBecameVisible");
     }
 
    
