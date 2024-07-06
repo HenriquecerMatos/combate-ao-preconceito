@@ -1124,7 +1124,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ConfiguracaoUser
+          m_StringArgument: Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &164242819
@@ -2324,7 +2324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pergunta:
-    Id: 
+    Id: 0
+    Key: 
     Texto: 
     Respostas: []
 --- !u!1 &412459553
@@ -3661,6 +3662,7 @@ MonoBehaviour:
   Perguntas:
     Perguntas: []
   PainelPerguntaResposta: {fileID: 1948475877}
+  Controller: {fileID: 0}
 --- !u!1 &709774374
 GameObject:
   m_ObjectHideFlags: 0
@@ -5477,6 +5479,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Header: {fileID: 265463440}
   Alternativa: {fileID: 1923949773}
+  RespostaSelecionada:
+    PerguntaKey: 
+    RepostaKey: 
+    Valor: 0
 --- !u!1 &1000373414
 GameObject:
   m_ObjectHideFlags: 0
@@ -10953,10 +10959,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1aeb8cf6a7b724589c5959817e1c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Controller: {fileID: 0}
   PerguntaTexto: {fileID: 0}
   AlternativaExemplo: {fileID: 0}
   Pergunta:
-    Id: 
+    Id: 0
+    Key: 
     Texto: 
     Respostas: []
   Alternativas:
@@ -10966,6 +10974,7 @@ MonoBehaviour:
   AlternativaSelecionada: {fileID: 0}
   CorAlternativaSelecionada: {r: 0, g: 1, b: 0, a: 1}
   CorAlternativaPadrao: {r: 1, g: 1, b: 1, a: 1}
+  ListaDeObjetosIgnoradosAoSeTornarVisivel: []
 --- !u!114 &1928693632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11155,16 +11164,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1aeb8cf6a7b724589c5959817e1c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Controller: {fileID: 0}
   PerguntaTexto: {fileID: 2021349281}
   AlternativaExemplo: {fileID: 953594901}
   Pergunta:
-    Id: 
+    Id: 0
+    Key: 
     Texto: 
     Respostas: []
   Alternativas: []
   AlternativaSelecionada: {fileID: 0}
   CorAlternativaSelecionada: {r: 0, g: 1, b: 0, a: 1}
   CorAlternativaPadrao: {r: 1, g: 1, b: 1, a: 1}
+  ListaDeObjetosIgnoradosAoSeTornarVisivel: []
 --- !u!1 &1954113246
 GameObject:
   m_ObjectHideFlags: 0
