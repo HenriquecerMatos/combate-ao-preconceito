@@ -58,7 +58,7 @@ public class MenuController : BaseController
             mostrarHistorico.Caracteristicas.text = item.Caracteristicas;
             var pontosTotalSemPeso = item.ValorTotal();
             var valorResultantePorPeso = item.ValorTotalComPeso();
-            mostrarHistorico.Pontuacao.text = valorResultantePorPeso + "/"+ pontosTotalSemPeso+ " pontos";
+            mostrarHistorico.Pontuacao.text = valorResultantePorPeso + "/" + pontosTotalSemPeso + " pontos";
 
             clone.SetActive(true);
         }
