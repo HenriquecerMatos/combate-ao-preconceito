@@ -23,6 +23,15 @@ namespace Entities
         [SerializeField]
         public FinanceiroEnum Financeiro = FinanceiroEnum.Rico;
 
+        [SerializeField]
+        public ReligiaoEnum Religiao = ReligiaoEnum.Nenhuma;
+
+        [SerializeField]
+        public BiosferaEnum Biosfera = BiosferaEnum.Op1;
+
+        [SerializeField]
+        public RelacoesEnum Relacoes = RelacoesEnum.Op1;
+
         public float ValorCalculadoApartirDasCaracteisticas(float entrada)
         {
             var pesoTotal = ValorPeso();
@@ -44,14 +53,26 @@ namespace Entities
             }
         }
 
+
+        /// <summary>
+        /// usado na hora de mostrar o histórico
+        /// </summary>
+        /// <returns></returns>
         public string Descrever()
         {
             return Sexo.ValorDescription() + ", " + Altura.ValorDescription() +
             ", " + Deficiencia.ValorDescription() + ", " + Preferencia.ValorDescription() +
             ", " + FaixaEtaria.ValorDescription() + ", " + CorDaPeleEtnia.ValorDescription() +
-            ", " + Financeiro.ValorDescription();
+            ", " + Financeiro.ValorDescription() +
+            ", " + Religiao.ValorDescription() +
+            ", " + Relacoes.ValorDescription()+
+            ", " + Biosfera.ValorDescription();
         }
 
+        /// <summary>
+        /// para calcular 
+        /// </summary>
+        /// <returns></returns>
         public float ValorPeso()
         {
             return Sexo.ValorPeso()
@@ -60,7 +81,8 @@ namespace Entities
             + Preferencia.ValorPeso()
             + FaixaEtaria.ValorPeso()
             + CorDaPeleEtnia.ValorPeso()
-            + Financeiro.ValorPeso();
+            + Financeiro.ValorPeso()
+            + Religiao.ValorPeso();
         }
     }
 }

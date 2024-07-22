@@ -29,7 +29,80 @@ public class UIMenuConfigUser : BaseController
         //DeficienciaEnum
         CriarMenuDeficiencia();
 
+        CriarMenuReligiao();
+
+        #region caracteristicas voltadas a seleção de perguntas
+        CriarMenuBiosfera();
+        CriarMenuRelacoes();
+        #endregion
+
         MenuClone.SetActive(false);
+    }
+
+    public void CriarMenuBiosfera()
+    {
+        var dicionario = EnumExtension.ToDictionaryIntString<BiosferaEnum>();
+        var listaBtnCriados = ListaDeBtsCriados(dicionario, "Religiao (onde alt):");
+
+        var chaves = dicionario.Keys.ToList(); // Obtemos uma lista das chaves
+        for (int i = 0; i < chaves.Count; i++)
+        {
+            int key = chaves[i];
+            string valor = dicionario[key];
+
+            var btn = listaBtnCriados[i];
+
+            btn.onClick.AddListener(
+                () =>
+                {
+                    UserController.Caracteristicas.Biosfera = (BiosferaEnum)key;
+                    Debug.Log(valor);
+                });
+        }
+    }
+
+    public void CriarMenuRelacoes()
+    {
+        var dicionario = EnumExtension.ToDictionaryIntString<RelacoesEnum>();
+        var listaBtnCriados = ListaDeBtsCriados(dicionario, "Religiao (onde alt):");
+
+        var chaves = dicionario.Keys.ToList(); // Obtemos uma lista das chaves
+        for (int i = 0; i < chaves.Count; i++)
+        {
+            int key = chaves[i];
+            string valor = dicionario[key];
+
+            var btn = listaBtnCriados[i];
+
+            btn.onClick.AddListener(
+                () =>
+                {
+                    UserController.Caracteristicas.Relacoes = (RelacoesEnum)key;
+                    Debug.Log(valor);
+                });
+        }
+    }
+
+    public void CriarMenuReligiao()
+    {
+        var dicionario = EnumExtension.ToDictionaryIntString<ReligiaoEnum>();
+        var listaBtnCriados = ListaDeBtsCriados(dicionario, "Religiao (onde alt):");
+
+        var chaves = dicionario.Keys.ToList(); // Obtemos uma lista das chaves
+        for (int i = 0; i < chaves.Count; i++)
+        {
+            int key = chaves[i];
+            string valor = dicionario[key];
+
+            var btn = listaBtnCriados[i];
+
+            btn.onClick.AddListener(
+                () =>
+                {
+                    UserController.Caracteristicas.Religiao = (ReligiaoEnum)key;
+                    Debug.Log(valor);
+                });
+        }
     }
 
     public void CriarMenuDeficiencia()

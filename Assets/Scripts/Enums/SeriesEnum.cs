@@ -178,3 +178,45 @@ public enum FinanceiroEnum
     Miseravel,
 }
 
+
+/// <summary>
+/// vida Religião
+/// </summary>
+public enum ReligiaoEnum
+{
+
+    [Description("Sem Religião"), Dificuldade(DificuldadeEnum.Medio), Peso(0f)] //0%
+    Nenhuma,
+    [Description("op1"), Dificuldade(DificuldadeEnum.Facil), Peso(-0.1f)] //+10% // fator facilitador
+    op1,
+    [Description("op2"), Dificuldade(DificuldadeEnum.dificil), Peso(0.025f)] //2,5%
+    op2,
+    [Description("op3"), Dificuldade(DificuldadeEnum.dificil), Peso(0.08f)] //8%
+    op3,
+}
+
+#region caracteristicas voltadas a seleção de perguntas
+
+/// <summary>
+/// Biosfera/ambiente
+/// </summary>
+public enum BiosferaEnum
+{
+    [Description("Exço"), Dificuldade(DificuldadeEnum.Medio), Peso(0f)] //0%
+    Op1,
+    [Description("Escassez"), Dificuldade(DificuldadeEnum.Facil), Peso(-0.1f)] //+10% // fator facilitador
+    Op2,
+}
+
+/// <summary>
+/// Biosfera/ambiente
+/// </summary>
+public enum RelacoesEnum
+{
+    [Description("Exço"), Dificuldade(DificuldadeEnum.Medio), Peso(0f)] //0%
+    Op1,
+    [Description("Escassez"), Dificuldade(DificuldadeEnum.Facil), Peso(-0.1f)] //+10% // fator facilitador
+    Op2,
+}
+#endregion
+
