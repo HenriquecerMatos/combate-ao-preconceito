@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class UserController : MonoBehaviour
@@ -19,7 +20,8 @@ public class UserController : MonoBehaviour
     public float Pontuacao = 0;
 
     public ListaRespostasDadas RespostasAcumuladasDaPartida = new();
-    public List<ListaRespostasDadas> HistoricoResposta;
+    public List<ListaRespostasDadas> HistoricoResposta = new();
+    public bool PodeSalvarHistorico;
 
     [SerializeField]
     public Caracteristicas Caracteristicas { get; set; } = new Caracteristicas();
@@ -37,7 +39,12 @@ public class UserController : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+    }
+    private void OnLevelWasLoaded()
+    {
         LerArquivosHistorico();
+        ResetarPontucaoEsalvamentoHistorico();
     }
 
     public void SetSerie(SeriesEnum serie)
@@ -66,15 +73,27 @@ public class UserController : MonoBehaviour
     #endregion
 
     #region Historico
-    public void SalvarArquivoHistorico()
+    public async Task SalvarArquivoHistorico()
     {
-        string filePath = Path.Combine(Application.persistentDataPath, PrefixoArquivoHistorico + DateTime.Now.Ticks + ".json");
-        if (RespostasAcumuladasDaPartida.listaPerguntasRespostas.Count() > 0)
+
+        if (PodeSalvarHistorico)
         {
-            RespostasAcumuladasDaPartida.Caracteristicas = Caracteristicas.Descrever();
-            RespostasAcumuladasDaPartida.Peso=Caracteristicas.ValorPeso();
-            File.WriteAllText(filePath, JsonUtility.ToJson(RespostasAcumuladasDaPartida));
+
+            string filePath = Path.Combine(Application.persistentDataPath, PrefixoArquivoHistorico + DateTime.Now.Ticks + ".json");
+            if (RespostasAcumuladasDaPartida.listaPerguntasRespostas.Count() > 0)
+            {
+                RespostasAcumuladasDaPartida.Caracteristicas = Caracteristicas.Descrever();
+                RespostasAcumuladasDaPartida.Peso = Caracteristicas.ValorPeso();
+                File.WriteAllText(filePath, JsonUtility.ToJson(RespostasAcumuladasDaPartida));
+            }
+            PodeSalvarHistorico = false;
         }
+    }
+
+    public void ResetarPontucaoEsalvamentoHistorico()
+    {
+        PodeSalvarHistorico = true;
+        Pontuacao = 0;
     }
 
     public void LerArquivosHistorico()
@@ -110,4 +129,6 @@ public class UserController : MonoBehaviour
         }
     }
     #endregion
+
+
 }

@@ -13,10 +13,16 @@ EditorBuildSettings:
     guid: 1af761830d5624440ba54301fc095a94
   - enabled: 1
     path: Assets/Scenes/ConfiguracaoUser.unity
-    guid: 3dde18a1a113b2244a8d410b9452bd08
+    guid: 571cce180a2b3434ab3b6c17012c80c3
+  - enabled: 1
+    path: Assets/Scenes/ConfiguracaoUserMostrar.unity
+    guid: 252b9c6669f7f3c408be204f57ca418a
   - enabled: 1
     path: Assets/Scenes/Jogo.unity
     guid: 73436e0c343d40a48bf6d71bc97120d8
+  - enabled: 0
+    path: Assets/Scenes/ConfiguracaoUserBK.unity
+    guid: 3dde18a1a113b2244a8d410b9452bd08
   - enabled: 0
     path: Assets/Scenes/Dificuldade.unity
     guid: e756deda45bb1ff41bd0ba3931171803

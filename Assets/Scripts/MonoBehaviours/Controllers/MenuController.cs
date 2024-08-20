@@ -53,6 +53,8 @@ public class MenuController : BaseController
             // Define o objeto clonado como filho do objeto pai
             clone.transform.SetParent(HistoricoPai);
 
+            clone.transform.localScale = Vector3.one;
+
             var mostrarHistorico = clone.GetComponent<MostrarHistorico>();
 
             mostrarHistorico.Caracteristicas.text = item.Caracteristicas;
@@ -71,5 +73,16 @@ public class MenuController : BaseController
     public void CarregarCena()
     {
         SceneManager.LoadScene("ConfiguracaoUser");
+    }
+
+    public void SairDoJogo()
+    {
+        // Este método fecha o jogo
+        Application.Quit();
+
+        // No editor, você pode usar o seguinte código para simular o fechamento do jogo:
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }

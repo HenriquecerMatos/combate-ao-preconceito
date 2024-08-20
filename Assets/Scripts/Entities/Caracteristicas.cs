@@ -55,7 +55,7 @@ namespace Entities
 
 
         /// <summary>
-        /// usado na hora de mostrar o histórico
+        /// usado na hora de mostrar o histórico ou características
         /// </summary>
         /// <returns></returns>
         public string Descrever()

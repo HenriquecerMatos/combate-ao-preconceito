@@ -16,7 +16,7 @@ public class BaseController : MonoBehaviour
             else//somente para debugar, para não precisar fazer todo o fluxo login>jogo
             {
                 // Crie um componente com o script UserController
-                GameObject userControllerObject = new GameObject("UserController");
+                GameObject userControllerObject = new(nameof(UserController));
                 UserController = userControllerObject.AddComponent<UserController>();
             }
         }

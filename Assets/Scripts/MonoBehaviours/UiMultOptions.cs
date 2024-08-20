@@ -19,7 +19,7 @@ public class UiMultOptions : MonoBehaviour
         {
             elemento.GetComponent<Button>().onClick.AddListener(
                 () => SetarResposta(elemento));
-        }
+        }        
     }
     public void SetarResposta(RectTransform elemento)
     {

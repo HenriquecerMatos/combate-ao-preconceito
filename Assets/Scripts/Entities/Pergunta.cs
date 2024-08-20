@@ -79,6 +79,10 @@ namespace Entities
         public string PerguntaKey;
         public string RepostaKey;
         public int Valor;
+        /// <summary>
+        /// tempo que o usuário levou para responder em segundos
+        /// </summary>
+        public float TempoParaResponder;
     }
     #endregion
 }

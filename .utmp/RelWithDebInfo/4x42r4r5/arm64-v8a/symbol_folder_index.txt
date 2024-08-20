@@ -1,0 +1,1 @@
+D:\Projetos\Unity3D\combate-ao-preconceito\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\4x42r4r5\obj\arm64-v8a

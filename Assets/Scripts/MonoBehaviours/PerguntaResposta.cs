@@ -19,12 +19,24 @@ public class PerguntaResposta : MonoBehaviour
     [Space(10)]
     public GameObject[] ListaDeObjetosIgnoradosAoSeTornarVisivel;
 
+    public float TempoDecorrido;
+
+    private void Update()
+    {
+        TempoDecorrido += Time.deltaTime * 1;
+    }
+
+    public void ZerarTempo()
+    {
+        TempoDecorrido = 0;
+    }
+
     public void ApagarAlternativasGeradas()
     {
         Alternativas = new();
         Transform[] listaDeletar = GetComponentsInChildren<Transform>();
 
-        var listaParaRemover =new  List<GameObject>();
+        var listaParaRemover = new List<GameObject>();
         for (int i = 0; i < listaDeletar.Count(); i++)
         {
             var item = listaDeletar[i];
@@ -40,11 +52,11 @@ public class PerguntaResposta : MonoBehaviour
         }
     }
 
-   
+
     public void CriarPerguntaAlternativas()
     {
         ApagarAlternativasGeradas();
-
+        ZerarTempo();
         var tmpPergunta = PerguntaTexto;
         tmpPergunta.text = Pergunta.Texto;
         for (int i = 0; i < Pergunta.Respostas.Length; i++)
@@ -53,6 +65,7 @@ public class PerguntaResposta : MonoBehaviour
             GameObject clone = Instantiate(AlternativaExemplo.gameObject, new(), Quaternion.identity);
             // Define o objeto clonado como filho do objeto pai
             clone.transform.SetParent(transform);
+            clone.transform.localScale = Vector3.one;
 
             var cloneAlternativaElemento = clone.GetComponent<AlternativaElemento>();
             cloneAlternativaElemento.Header.text = $"{i + 1}° Alternativa";
@@ -91,6 +104,8 @@ public class PerguntaResposta : MonoBehaviour
             var perguntaResposta = alternativas.RespostaSelecionada;
             if (perguntaResposta is not null)
             {
+
+                perguntaResposta.TempoParaResponder = TempoDecorrido;
                 Controller.UserController.CalcularPontuacao(perguntaResposta);
             }
         }

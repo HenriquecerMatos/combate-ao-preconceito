@@ -1,5 +1,6 @@
 using Entities;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
@@ -16,6 +17,7 @@ public class ObjectCloner : MonoBehaviour
     public Vector2 spawnLimit = new Vector2(-5f, 5f); // Limite de posição para instanciar clones
 
     public ListaPerguntas Perguntas;
+    public List<GameObject> CaixaDePerguntas = new();
 
     #region Painel PerguntaRestpota
     public Transform PainelPerguntaResposta;
@@ -50,20 +52,30 @@ public class ObjectCloner : MonoBehaviour
             clone.GetComponent<PerguntaDroper>().Pergunta = perguntaSelecionada;
             //ativa o elemento
             clone.SetActive(true);
+            clone.transform.localScale = Vector3.one;
+
+            CaixaDePerguntas.Add(clone);
             // Aguarda o próximo intervalo
             Perguntas.Perguntas.Remove(perguntaSelecionada);
             yield return new WaitForSeconds(cloneInterval);
         }
-        if (Perguntas.Perguntas.Count() == 0)
+    }
+
+    async void Update()
+    {
+        var caixasRestantes = CaixaDePerguntas.Where(x => x != null);
+        if (Perguntas.Perguntas.Count() == 0 && caixasRestantes.Count() == 0)
         {
             Debug.Log("Finalizou");
-            yield return new WaitForSeconds(5);
+            // yield return new WaitForSeconds(5);
             Debug.Log("Finalizar jogo em 5 Sec");
 
             Controller.PanelFinalizar.SetActive(true);
-            Controller.UserController.SalvarArquivoHistorico();
+            await Controller.UserController.SalvarArquivoHistorico();
         }
     }
+
+
 
     private Vector3 GetRandomSpawnPosition()
     {
