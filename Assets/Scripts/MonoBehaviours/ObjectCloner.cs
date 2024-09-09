@@ -25,11 +25,17 @@ public class ObjectCloner : MonoBehaviour
 
     [Space(20)]
     public JogoController Controller;
+
+    private void Awake()
+    {
+        spawnLimit.y = Screen.height;
+        spawnLimit.x = Screen.width;
+    }
     private void Start()
     {
         // Inicia a rotina para clonar objetos em intervalos
         CriarListaDePerguntas();
-        StartCoroutine(CloneObjects());
+        StartCoroutine(CloneObjects());       
     }
 
     private void CriarListaDePerguntas()
@@ -66,9 +72,9 @@ public class ObjectCloner : MonoBehaviour
         var caixasRestantes = CaixaDePerguntas.Where(x => x != null);
         if (Perguntas.Perguntas.Count() == 0 && caixasRestantes.Count() == 0)
         {
-            Debug.Log("Finalizou");
+            //Debug.Log("Finalizou");
             // yield return new WaitForSeconds(5);
-            Debug.Log("Finalizar jogo em 5 Sec");
+            //Debug.Log("Finalizar jogo em 5 Sec");
 
             Controller.PanelFinalizar.SetActive(true);
             await Controller.UserController.SalvarArquivoHistorico();
