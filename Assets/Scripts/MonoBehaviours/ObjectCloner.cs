@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 
 /// <summary>
-/// Responsável por criar as caixas que caem na cena "Jogo"
+/// Responsável por criar as caixas que aparecem no Jogo
 /// </summary>
 public class ObjectCloner : MonoBehaviour
 {
@@ -72,10 +71,6 @@ public class ObjectCloner : MonoBehaviour
         var caixasRestantes = CaixaDePerguntas.Where(x => x != null);
         if (Perguntas.Perguntas.Count() == 0 && caixasRestantes.Count() == 0)
         {
-            //Debug.Log("Finalizou");
-            // yield return new WaitForSeconds(5);
-            //Debug.Log("Finalizar jogo em 5 Sec");
-
             Controller.PanelFinalizar.SetActive(true);
             await Controller.UserController.SalvarArquivoHistorico();
         }
@@ -88,7 +83,23 @@ public class ObjectCloner : MonoBehaviour
         // Gera uma posição aleatória dentro do limite definido
         float x = Random.Range(50, spawnLimit.x);
         //float y = Random.Range(spawnLimit.x, spawnLimit.y);
-        return new Vector3(x, spawnLimit.y, 0f);
+        //return new Vector3(x, spawnLimit.y, 0);
+
+
+
+        Vector3[] worldCorners = new Vector3[4];
+        GetComponent<RectTransform>().GetWorldCorners(worldCorners);
+
+        // Cálculo dos limites em X e Y (horizontal e vertical)
+        float minX = worldCorners[0].x; // canto inferior esquerdo
+        float maxX = worldCorners[2].x; // canto superior direito
+        float minY = worldCorners[0].y;
+        float maxY = worldCorners[2].y;
+
+        float randomX = Random.Range(minX, maxX);
+        float randomY = Random.Range(minY, maxY);
+
+        return new Vector3(randomX, randomY, 0);
     }
 
     #region Mostrar UI para Responder

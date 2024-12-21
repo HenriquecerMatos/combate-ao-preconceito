@@ -1,80 +1,152 @@
+using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class ImageMovement : MonoBehaviour
 {
-    /// <summary>
-    /// Velocidade de movimento da imagem
-    /// </summary>
-    public float speed = 15.0f; 
+    ///// <summary>
+    ///// Velocidade de movimento da imagem
+    ///// </summary>
+    //public float speed = 15.0f; 
     /// <summary>
     /// Tamanho da imagem
     /// </summary>
-    public Vector2 imageSize = new Vector2(120f, 50f); 
+    public Vector2 imageSize = new Vector2(120f, 50f);
     private RectTransform imageTransform;
     /// <summary>
-    /// Referência ao componente de texto
+    /// Referï¿½ncia ao componente de texto
     /// </summary>
-    private TextMeshProUGUI randomText; 
+    private TextMeshProUGUI randomText;
 
     public int AlturaAPercorrer = 0;
 
+
+
+
+    public float minSpeed = 1f;
+    public float maxSpeed = 5f;
+    private Vector2 velocity;
+
+    private Rigidbody2D rb;
+
     private void Start()
     {
-        // Obtém a referência ao componente RectTransform da imagem
+        // Obtï¿½m a referï¿½ncia ao componente RectTransform da imagem
         imageTransform = GetComponent<RectTransform>();
-        imageTransform.sizeDelta = imageSize;
-        RandomizeImageColor();
 
-        // Obtém a referência ao componente de texto como um filho do GameObject
+        // ObtÃ©m a referÃªncia ao componente de texto como um filho do GameObject
         randomText = GetComponentInChildren<TextMeshProUGUI>();
 
-        // Inicializa o texto com um número aleatório
+        // Inicializa o texto com um nï¿½mero aleatï¿½rio
         UpdateRandomText();
 
 
-        //var pai =transform.GetComponentInParent<RectTransform>();
-        AlturaAPercorrer = Screen.height*-1;
 
+
+        //var pai =transform.GetComponentInParent<RectTransform>();
+        AlturaAPercorrer = Screen.height * -1;
+
+
+        rb = GetComponent<Rigidbody2D>();
+        float speed = Random.Range(minSpeed, maxSpeed);
+        float angle = Random.Range(0, 360) * Mathf.Deg2Rad;
+        velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * speed;
+        rb.linearVelocity = velocity;
+
+
+        var pergunta = GetComponent<PerguntaDroper>().Pergunta;
+
+        RandomizeImageColor();
+
+
+        ObterCorPorRaridade(pergunta.ValorMax);
+
+    }
+
+    void FixedUpdate()
+    {
+        // Limitar a velocidade do objeto
+        if (rb.linearVelocity.magnitude > maxSpeed)
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+        }
     }
 
     private void Update()
     {
-        // Move a imagem para baixo com base na velocidade e no tempo
-        float newYPosition = imageTransform.anchoredPosition.y - (speed * Time.deltaTime);
-        imageTransform.anchoredPosition = new Vector2(imageTransform.anchoredPosition.x, newYPosition);
-
-        if (imageTransform.anchoredPosition.y <= (AlturaAPercorrer))
-        {
-            Destroy(gameObject);
-        }
-       //var altura = Screen.height;
     }
 
     private void UpdateRandomText()
     {
         var Pergunta = GetComponent<PerguntaDroper>();
-        randomText.text = Pergunta.Pergunta.ValorMax.ToString("F2"); // Exibe o número no texto
+        randomText.text = Pergunta.Pergunta.ValorMax.ToString("F2"); // Exibe o nï¿½mero no texto
     }
 
     private void RandomizeImageColor()
     {
-        // Gera valores aleatórios para os componentes R, G e B da cor
+        // Gera valores aleatï¿½rios para os componentes R, G e B da cor
         float r = Random.Range(0.2f, 1f);
         float g = Random.Range(0.2f, 1f);
         float b = Random.Range(0.2f, 1f);
 
-        // Cria uma nova cor com os valores aleatórios
+        // Cria uma nova cor com os valores aleatï¿½rios
         Color randomColor = new Color(r, g, b);
 
-        // Aplica a cor à imagem
+        // Aplica a cor ï¿½ imagem
         imageTransform.GetComponent<Image>().color = randomColor;
     }
 
+    public void ObterCorPorRaridade(int valorPassado)
+    {
+        // DicionÃ¡rio com as cores de raridade
+        var raridadeCores = new Dictionary<int, string>
+    {
+        { 6, "#808080" },   // Comum (Cinza)
+        { 12, "#FFFFFF" },  // PadrÃ£o (Branco)
+        { 18, "#1EFF00" },  // Incomum (Verde)
+        { 24, "#0070DD" },  // Raro (Azul)
+        { 30, "#A335EE" },  // Ã‰pico (Roxo)
+        { 36, "#FF8000" },  // LendÃ¡rio (Laranja)
+        { 42, "#E6CC80" },  // MÃ­tico (Dourado)
+        { 50, "#FF0000" }  // Divino (Vermelho)
+    };
+
+        // Validar o valor passado para estar entre 0 e 100
+        if (valorPassado < 0) valorPassado = 0;
+        if (valorPassado > 100) valorPassado = 100;
+
+        // Encontrar o maior valor no dicionÃ¡rio menor ou igual ao valor passado
+        int chaveMaisProxima = raridadeCores.Keys
+            .Where(chave => chave <= valorPassado)
+            .Max();
+
+        // Retornar a cor correspondente
+
+        // return ;
+
+        imageTransform.GetComponent<Image>().color = HexToColor(raridadeCores[chaveMaisProxima]);
+    }
+
+
+
+    Color HexToColor(string hex)
+    {
+        Color color;
+        if (ColorUtility.TryParseHtmlString(hex, out color))
+        {
+            return color;
+        }
+        else
+        {
+            return Color.white;  // Retorna branco caso o hex seja invÃ¡lido
+        }
+    }
     private void OnBecameInvisible()
     {
-        // Quando o objeto não está mais visível na câmera, remova-o da cena
+        // Quando o objeto nï¿½o estï¿½ mais visï¿½vel na cï¿½mera, remova-o da cena
         Destroy(gameObject);
     }
 }
