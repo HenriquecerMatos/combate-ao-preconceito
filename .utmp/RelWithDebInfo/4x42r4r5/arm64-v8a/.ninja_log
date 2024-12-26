@@ -1,10 +1,10 @@
 # ninja log v5
-54	2522	7458348822267277	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	1c5c1431a7f9667a
-40	2534	7458348822408273	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	ac57e1a387f854d
-1	2616	7458348823267640	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	a55d5759f0467d50
-67	2690	7458348824032788	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	ba267093f6ac2bf1
-75	2791	7458348825042218	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	816bff5eb881dac7
-14	2914	7458348826299686	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	4c73a7d7f0cb2131
-32	3212	7458348829339148	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	bf1594dff69ae711
-22	3722	7458348834115785	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c370bef7e645e179
-3724	4126	7458348837435258	D:/Projetos/Unity3D/combate-ao-preconceito/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4x42r4r5/obj/arm64-v8a/libgame.so	c2488ab231497ef6
+60	2268	7569365184525215	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	ab07e1158d64c5bf
+37	2302	7569365184905392	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	6cb95a7bf936c726
+16	2318	7569365185107934	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	73fa5806fec2ec49
+71	2391	7569365185864973	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	c55cc4e847fe710a
+81	2499	7569365186942242	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	75b7a918fe92d8df
+1	2624	7569365188214518	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	a103d32515b279f4
+48	2993	7569365191872366	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	34fd8f5bb2412400
+27	3285	7569365194751701	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	a1df5fe4368fec87
+3286	3556	7569365197457375	D:/Projetos/Unity3D/combate-ao-preconceito/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4x42r4r5/obj/arm64-v8a/libgame.so	9a8c16097068aa0a

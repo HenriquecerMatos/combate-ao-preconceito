@@ -1,7 +1,10 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -15,9 +18,9 @@ public class ImageMovement : MonoBehaviour
     /// Tamanho da imagem
     /// </summary>
     public Vector2 imageSize = new Vector2(120f, 50f);
-    private RectTransform imageTransform;
+    public RectTransform ImageTransform;
     /// <summary>
-    /// Refer�ncia ao componente de texto
+    /// Referencia ao componente de texto
     /// </summary>
     private TextMeshProUGUI randomText;
 
@@ -32,15 +35,82 @@ public class ImageMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    #region vida do box
+    //[Multiline()]
+    [Space(10)]
+    public int Vida = 10;
+    public int VidaReferencia = 10;
+    public Image VidaUi;
+
+    private AudioSource AudioSource;
+    public AudioClip SonFinalVida;
+    private void InicializarVida()
+    {
+        if (VidaUi != null)
+        {
+            var pergunta = GetComponent<PerguntaDroper>().Pergunta;
+            Vida = pergunta.ValorMax;
+            VidaReferencia = pergunta.ValorMax;
+        }
+        else
+        {
+            Debug.Log("pergunta sem quantidade de vida");
+        }
+    }
+
+    private void ReduzirVida()
+    {
+        if (rb != null && VidaUi != null)
+        {
+            Vida--;
+
+
+            var valorPorcentagem = ((float)Vida / (float)VidaReferencia);
+
+            VidaUi.fillAmount = valorPorcentagem;
+
+            if (Vida <= 0)
+            {
+                StartCoroutine(DestroiObj());
+               
+            }
+
+        }
+    }
+
+    private IEnumerator DestroiObj()
+    {
+        AudioSource.clip = SonFinalVida;
+        AudioSource.Play();
+        yield return new WaitForSeconds(SonFinalVida.length);
+        Destroy(gameObject);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        ReduzirVida();
+        ReproduzirSom();
+    }
+
+    public void ReproduzirSom()
+    {
+        if (AudioSource != null && AudioSource.clip != null)
+        {
+            // Reproduz o som
+            AudioSource.Play();
+        }
+    }
+    #endregion
+
     private void Start()
     {
-        // Obt�m a refer�ncia ao componente RectTransform da imagem
-        imageTransform = GetComponent<RectTransform>();
+        // Obtém a o AudioSource
+        AudioSource = GetComponent<AudioSource>();
 
         // Obtém a referência ao componente de texto como um filho do GameObject
         randomText = GetComponentInChildren<TextMeshProUGUI>();
 
-        // Inicializa o texto com um n�mero aleat�rio
+        // Inicializa o texto com um número aleatório
         UpdateRandomText();
 
 
@@ -59,10 +129,11 @@ public class ImageMovement : MonoBehaviour
 
         var pergunta = GetComponent<PerguntaDroper>().Pergunta;
 
-        RandomizeImageColor();
+        //RandomizeImageColor();
 
 
         ObterCorPorRaridade(pergunta.ValorMax);
+        InicializarVida();
 
     }
 
@@ -96,7 +167,7 @@ public class ImageMovement : MonoBehaviour
         Color randomColor = new Color(r, g, b);
 
         // Aplica a cor � imagem
-        imageTransform.GetComponent<Image>().color = randomColor;
+        ImageTransform.GetComponent<Image>().color = randomColor;
     }
 
     public void ObterCorPorRaridade(int valorPassado)
@@ -127,7 +198,7 @@ public class ImageMovement : MonoBehaviour
 
         // return ;
 
-        imageTransform.GetComponent<Image>().color = HexToColor(raridadeCores[chaveMaisProxima]);
+        ImageTransform.GetComponent<Image>().color = HexToColor(raridadeCores[chaveMaisProxima]);
     }
 
 
@@ -135,7 +206,7 @@ public class ImageMovement : MonoBehaviour
     Color HexToColor(string hex)
     {
         Color color;
-        if (ColorUtility.TryParseHtmlString(hex, out color))
+        if (UnityEngine.ColorUtility.TryParseHtmlString(hex, out color))
         {
             return color;
         }
